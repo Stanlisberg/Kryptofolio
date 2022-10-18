@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/layouts/Navbar'
+import Home from './components/pages/Home'
+import Market from './components/pages/Market'
+import About from './components/pages/About'
+import Contact from './components/pages/Contact';
+import CoinInfo from './components/CoinDesc/CoinInfo';
+import { KryptofolioProvider } from './components/Context/KryptofolioContext';
+// import BitcoinChart from './components/HomeCoinChart/BitcoinChart';
+import Footer from './components/layouts/Footer';
+import Icons from './components/layouts/icons';
 
-function App() {
+  function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <KryptofolioProvider>
+    <div className="app">
+
+{/* with the Router component, we are enabling the react routing mechanism */}
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/About' element={<About />} /> 
+          <Route path='/Market' element={<Market />} />
+          <Route path='/Contact' element={<Contact />} />
+          <Route path='/coin/:coinId' element={<CoinInfo />}>
+            <Route path=':coinId' />
+          </Route>
+        </Routes>
+      </Router>
+      <div className='footer-div  flex flex-col items-center'>
+          <Icons />
+          <Footer/>
+          <div className='gecko footer md:mt-3 md:contents hidden border font-mono'>Powered by Coingecko.</div>
+      </div>
     </div>
-  );
+    </KryptofolioProvider>
+    </>
+  ); 
 }
 
 export default App;
