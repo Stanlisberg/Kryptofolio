@@ -32,7 +32,7 @@ function Home() {
                       placeholder="Search Coins"
                       className="input-search"
                     />
-                  </td>
+                  </td>  
                 </tr>
               </thead>
             </table>
@@ -58,6 +58,22 @@ function Home() {
               );
             }
           })} */}
+          {/* <div className="name pt-3 grid items-center justify-center h-screen ease-in duration-300">
+          <div className=" contents md:hidden ">
+            <Link to="/" className="primary-color link pl-5 ">
+              Home
+            </Link>
+            <Link to="/About" className="primary-color link pl-5 ">
+              About
+            </Link>
+            <Link to="/Contact" className="primary-color link pl-5 ">
+              Contact
+            </Link>
+            <Link to="/Market" className="primary-color link-market pb-2 pl-5 ">
+              Coin-Market
+            </Link>
+          </div>
+          </div> */}
         <div className="flex justify-end mr-4 mt-3">
           <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>
           <button className={signUp ? "sign-up" : "sign-in"}>Sign Up</button>
