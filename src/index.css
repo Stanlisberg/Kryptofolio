@@ -186,6 +186,18 @@ body{
   border:1px solid #64ffda;
 }
 
+.name {
+  position:fixed;
+  height:100vh;
+  scroll-behavior: auto;
+  width:100%;
+  background: black;
+  /* top: 80px;
+  left:0; */
+  text-align: center;
+  display: block
+}
+
 /*-------Search-Input section------*/
 .input-container .input-wrapper {
   max-width: auto;
