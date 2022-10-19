@@ -128,7 +128,8 @@ body{
 }
 
 .nav-logo {
-  color:#ccd6f6
+  color:#ccd6f6;
+  margin-right:4px;
 }
 
 .link, .link-market {
@@ -583,15 +584,11 @@ body{
       width: 100%;
     }
 
-    .nav-wrapper {
+    /* .nav-wrapper {
       flex-direction:  column;
      justify-content: center;
      align-items: center;
-    }
-
-    .link-wrapper {
-      flex-wrap: wrap;
-    }  
+    } */
 
     .input-container .input:focus {
       margin: 0 auto;

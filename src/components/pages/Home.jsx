@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       <section className="input-container">
-        <div className="input-wrapper mt-100 ">
+        {/* <div className="input-wrapper mt-100 ">
           <h1 className='input-head'></h1>
           <div className="input-box">
             <table className="table-container">
@@ -35,7 +35,7 @@ function Home() {
               </thead>
             </table>
           </div>
-        </div>
+        </div> */}
         {searchData &&
           searchData.length > 0 &&
           searchData.map((value) => {
