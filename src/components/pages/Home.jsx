@@ -36,7 +36,7 @@ function Home() {
             </table>
           </div>
         </div> */}
-        {searchData &&
+        {/* {searchData &&
           searchData.length > 0 &&
           searchData.map((value) => {
             if (grabSearch.length < 1) {
@@ -55,7 +55,7 @@ function Home() {
                 </div>
               );
             }
-          })}
+          })} */}
         <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden">
           <div className="overview-trans text-center mx-auto w-full lg:text-start overflow-hidden"
           >
