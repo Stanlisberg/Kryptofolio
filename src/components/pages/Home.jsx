@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import BitcoinChart from "../HomeCoinChart/BitcoinChart";
 import KryptofolioContext from "../Context/KryptofolioContext";
@@ -9,6 +9,8 @@ const LazyAbout = React.lazy(() => import('../image/HomeImage'))
 function Home() {
   const { searchData, fetchSearch, loading } = useContext(KryptofolioContext);
   const grabSearch = useRef();
+  const [signIn, setSignIn ] = useState(true);
+  const [signUp, setSignUp ] = useState(true);
 
   return (
     <>
@@ -56,6 +58,10 @@ function Home() {
               );
             }
           })} */}
+          <div className='flex justify-end mr-4 mt-3'>
+            <button className={signIn ? 'sign-in' : 'sign-up'}>Sign In</button>
+            <button className={signUp ? 'sign-up' : 'sign-in'}>Sign Up</button>
+          </div>
         <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden">
           <div className="overview-trans text-center mx-auto w-full lg:text-start overflow-hidden"
           >
