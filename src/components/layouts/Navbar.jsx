@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FaCoins } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 // import { GiTwoCoins } from 'react-icons/gi'
 function Navbar() {
+    const navigate = useNavigate()
    
     return(
         <>
@@ -29,7 +30,7 @@ function Navbar() {
                         </Link>
                        </div>
                     </div>
-                    <div className='pt-1 md:hidden ml-3'>
+                    <div className='pt-1 md:hidden ml-3 block cursor-pointer z-10' onClick={() => navigate('/Hamburger')}>
                         <GiHamburgerMenu size='25' color='#64ffda'/>
                     </div>
              </div>
