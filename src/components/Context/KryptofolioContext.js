@@ -8,6 +8,7 @@ export const KryptofolioProvider = ({ children }) => {
   const [searchData, setSearchData] = useState({});
   const [coinInfoData, setCoinInfoData] = useState();
   const [loading, setLoading] = useState(true);
+
   // initialising reducer
   const initialState = {
     coinData: {}, 

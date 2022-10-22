@@ -128,7 +128,7 @@ function Home() {
             <img src="logos/crypto.svg" width="120" />
           </div>
         </div>
-      </div>
+       </div>
     </>
   );
 }
