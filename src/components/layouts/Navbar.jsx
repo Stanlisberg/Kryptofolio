@@ -63,13 +63,11 @@ function Navbar() {
                        Coin-Market
                     </li>
                 </ul>
-                <div className='absolute'>
-                  <div className='relative top-2 bottom-1 left-5 right-2 bg-yellow-600'>
+                  <div className=' bg-yellow-600'>
                    <Link to='/Sign-in'>
                     <button>Sign In</button></Link>
                    <Link to='/Sign-up'>
                    <button>Sign In</button></Link>
-                 </div>
                  </div>
              </div>
          </div>
