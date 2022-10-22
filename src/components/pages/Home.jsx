@@ -105,7 +105,7 @@ function Home() {
         <div className="mkt-element">Market Cap sparkline chart.</div>
       </div>
       {loading && (
-        <div className="loading text-center font-bold">Loading...</div>
+        <div className="loading text-center font-bold pt-5">Loading...</div>
       )}
       <BitcoinChart />
 

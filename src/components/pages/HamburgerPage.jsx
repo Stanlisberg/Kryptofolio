@@ -2,7 +2,7 @@ import {Link } from 'react-router-dom'
 function HamburgerPage() {
     return(
         <> 
-        <div className="pt-3 grid items-center justify-center h-screen ease-in duration-300">
+        <div className="pt-3 grid items-center justify-center h-screen ease-in duration-300 bg-gray-500">
           <div className="contents md:hidde ">
             <Link to="/" className="primary-color link pl-5 ">
               Home

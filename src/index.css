@@ -67,6 +67,10 @@
 .primary-color{
   color: #ccd6f6
 }
+
+.lolo {
+  display: none;
+}
 .table-heading-color {
   color:#64ffda
 } 
@@ -84,7 +88,7 @@
 }
 
 .bg-gray{
- background: #0b1e36
+ background: hsl(216, 79%, 7%);
 }
 
 .about-container{
