@@ -1,5 +1,5 @@
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai'
-import { FaUser } from 'react-icons/fa'
+import { FaUserTie } from 'react-icons/fa'
 import { useState, useRef } from 'react'
 
 function SignIn() {
@@ -26,7 +26,7 @@ function SignIn() {
                     className="bg-input w-full p-2 rounded-2xl"
                     placeholder='Name'
                    />
-                   <FaUser className='absolute left-2 top-3 text-gray-400' color='#64ffda'/>
+                   <FaUserTie className='absolute left-2 top-3 text-gray-400' color='#64ffda'/>
                   </div>
                 </div>
 
