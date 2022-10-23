@@ -4,10 +4,10 @@ import Home from './components/pages/Home'
 import Market from './components/pages/Market'
 import About from './components/pages/About'
 import Contact from './components/pages/Contact';
-import HamburgerPage from './components/pages/HamburgerPage';
 import CoinInfo from './components/CoinDesc/CoinInfo';
+import SignIn from './components/pages/SignIn';
+import SignUp from './components/pages/SignUp';
 import { KryptofolioProvider } from './components/Context/KryptofolioContext';
-// import BitcoinChart from './components/HomeCoinChart/BitcoinChart';
 import Footer from './components/layouts/Footer';
 import Icons from './components/layouts/icons';
 
@@ -25,7 +25,8 @@ import Icons from './components/layouts/icons';
           <Route path='/About' element={<About />} /> 
           <Route path='/Market' element={<Market />} />
           <Route path='/Contact' element={<Contact />} />
-          <Route path='/Hamburger' element={<HamburgerPage />} />
+          <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp />} />
           <Route path='/coin/:coinId' element={<CoinInfo />}>
             <Route path=':coinId' />
           </Route>

@@ -136,13 +136,17 @@ body{
   margin-right:4px;
 }
 
-.link, .link-market {
+.link, .link-market, .link-profile {
   padding: 0 10px
 }
 
 .link:hover{
   color: #64ffda;
   border-bottom: 1px solid #64ffda;
+}
+
+.link-profile:hover {
+  color: #64ffda;
 }
 
 .link-market {
