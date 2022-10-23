@@ -48,10 +48,7 @@ function SignIn() {
                     {/* <div className='max-w-[500px] border'> */}
                    <input
                     ref={inputRef}
-                    onFocus={() => {
-                        setRemoveIcon(false)
-                        color()
-                    }}
+                    onFocus={() =>  setRemoveIcon(false) }
                     onBlur={() =>  {
                         setRemoveIcon(true)
                         clearInput()

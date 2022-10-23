@@ -104,7 +104,7 @@ input::placeholder {
 
 .bg-input{
   background: #0b1e36;
-  /* border: 1px solid dimgrey; */
+  border: 1px solid dimgrey;
   padding-left: 5px;
   /* color:dimgrey */
 }
