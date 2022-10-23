@@ -75,8 +75,12 @@ function Home() {
           </div>
           </div> */}
         <div className="flex justify-end mr-4 mt-3">
-          <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>
-          <button className={signUp ? "sign-up" : "sign-in"}>Sign Up</button>
+          <Link to='sign-in'>
+            <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>
+          </Link>
+          <Link to='sign-up'>
+            <button className={signUp ? "sign-up" : "sign-in"}>Sign Up</button>
+          </Link>
         </div>
         <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden">
           <div className="overview-trans text-center mx-auto w-full lg:text-start overflow-hidden">

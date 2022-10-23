@@ -1,11 +1,10 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useState } from 'react'
-import { FaCoins } from 'react-icons/fa'
+import { FaCoins, FaTimes, FaUser } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 function Navbar() {
-    const navigate = useNavigate()
-    const [display, setDisplay] = useState(true)
+    const [navIcon, setNavIcon] = useState(true)
    
     return(
         <>
@@ -17,7 +16,7 @@ function Navbar() {
                      <span className='nav-folio'>Folio</span>
                  </div>
                     <div className='pt-3'>
-                      <div className='hidden md:contents'>
+                      <div className='hidden md:contents relative'>
                         <Link to='/' className='primary-color link pl-5 '>
                             Home
                         </Link>
@@ -30,45 +29,41 @@ function Navbar() {
                         <Link to='/Market' className='primary-color link-market pb-2 pl-5 '>
                             Coin-Market
                         </Link>
+                        <Link to='/Market' className='primary-color link-profile pb-2 pl-5 '>
+                            Profile
+                        </Link>
+                        <div className='flex justify-end absolute top-8 right-8'><FaUser size='14' color='#64ffda'/></div>
                        </div>  
                     </div>
                     <div className='pt-1 md:hidden ml-3 block cursor-pointer z-10'>
-                        <GiHamburgerMenu size='25' color='#64ffda' onClick={() => {}}/>
+                        {navIcon === true ? <GiHamburgerMenu size='25' color='#64ffda' onClick={() => setNavIcon(!navIcon)} /> : <FaTimes size='25' color='#64ffda' onClick={() => setNavIcon(!navIcon)} />}
                     </div>
              </div>
-             <div className={ display === true ? 'md:hidden fixed top-17 items-center justify-between w-full h-full bg-gray ease-in duration-300 z-10' : 'lolo'}>
+             <div className={ 
+                navIcon === false 
+                 ? 'md:hidden block fixed top-17 items-center justify-between w-full h-full bg-gray ease-in duration-300 z-10' 
+                 : 'fixed items-center -left-96 justify-between h-full bg-gray ease-in duration-300 z-10'} >
                 <ul className='w-full p-4'>
-                    <li className='border-b py-6 cursor-pointer' onClick={() => {
-                        navigate('/')
-                        setDisplay(false)
-                    }}>
-                       Home
-                    </li>
-                    <li className='border-b py-6 cursor-pointer' onClick={() => {
-                        navigate('/About')
-                        setDisplay(false)
-                    }}>
-                       About
-                    </li>
-                    <li className='border-b py-6 cursor-pointer' onClick={() => {
-                        navigate('/Contact')
-                        setDisplay(false)
-                    }}>
-                       Contact
-                    </li>
-                    <li className='border-b py-6 cursor-pointer' onClick={() => {
-                        navigate('/Market')
-                        setDisplay(false)
-                    }}>
-                       Coin-Market
-                    </li>
+                     <li className='border-b py-6 cursor-pointer' onClick={() => setNavIcon(!navIcon)}>
+                      <Link to='/'>Home</Link> 
+                     </li>
+
+                     <li className='border-b py-6 cursor-pointer' onClick={() => setNavIcon(!navIcon)}>
+                      <Link to='/About'>About</Link> 
+                     </li>
+
+                     <li className='border-b py-6 cursor-pointer' onClick={() => setNavIcon(!navIcon)}>
+                      <Link to='/Contact'>Contact</Link> 
+                     </li>
+
+                     <li className='border-b py-6 cursor-pointer' onClick={() => setNavIcon(!navIcon)}>
+                      <Link to='/Market'>Coin-Market</Link> 
+                     </li>
+
+                     <li className=' py-6 cursor-pointer' onClick={() => setNavIcon(!navIcon)}>
+                      <Link to='/Profile'>Profile</Link> 
+                     </li>
                 </ul>
-                  <div className=' bg-yellow-600'>
-                   <Link to='/Sign-in'>
-                    <button>Sign In</button></Link>
-                   <Link to='/Sign-up'>
-                   <button>Sign In</button></Link>
-                 </div>
              </div>
          </div>
         </>
