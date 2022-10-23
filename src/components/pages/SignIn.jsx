@@ -15,7 +15,7 @@ function SignIn() {
     }
 
     return(
-        <div className='max-w-[900px] mx-auto min-h-[500px] px-4 py-20 mt-4 border'>
+        <div className='max-w-[600px] mx-auto min-h-[500px] px-4 py-20 border'>
             <h2 className='mt-3 font-bold text-3xl overflow-hidden'>Create Account!</h2>
             <form className='mt-5'>
                 <div className='my4'>
