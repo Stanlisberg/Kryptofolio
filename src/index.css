@@ -18,6 +18,12 @@
   font-family: 'poppins', sans-serif;
 }
 
+input::placeholder {
+  right: 5px;
+  padding-left: 40px;
+  opacity: 0.4
+}
+
 /*--------------Animation-----------------*/
 @keyframes slideInFromLeft {
   0% {
@@ -94,6 +100,13 @@
 .about-container{
   /* background-color: #15273a; */
   background: #0b1e36
+}
+
+.bg-input{
+  background: #0b1e36;
+  border: 1px solid dimgrey;
+  padding-left: 5px;
+  /* color:dimgrey */
 }
 
 .go-back:hover {
