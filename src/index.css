@@ -73,10 +73,10 @@ input::placeholder {
 .primary-color{
   color: #ccd6f6
 }
-
-.lolo {
-  display: none;
+.color-green {
+  color: teal;
 }
+
 .table-heading-color {
   color:#64ffda
 } 
@@ -173,6 +173,7 @@ body{
   background: #64ffda;
 }
 
+/* ............Sign-in and Sign-up..............*/
 .sign-in {
   padding: 3px 5px;
   border: 1px solid grey;
@@ -200,12 +201,26 @@ body{
   border: 1px solid grey;
 }
 
-.sign-in:hover, .sign-up:hover {
+.sign-in:hover, .sign-up:hover, .sign-instead:hover {
   color:#1f2937;
   transform: scale(0.93);
   background-color: #64ffda;
   border:1px solid #64ffda;
 }
+
+.sign-instead:hover {
+  background-color: teal;
+  border:1px solid teal;
+  padding: 0 3px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.bg-green {
+  background-color: teal;
+  border: 1px solid teal;
+  border-radius: 6px;
+}
+
 
 .name {
   position:fixed;

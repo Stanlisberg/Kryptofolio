@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext, useRef, useState } from "react";
+import { useContext,  useState } from "react";
 import { Link } from "react-router-dom";
 import BitcoinChart from "../HomeCoinChart/BitcoinChart";
 import KryptofolioContext from "../Context/KryptofolioContext";
@@ -8,7 +8,6 @@ const LazyAbout = React.lazy(() => import("../image/HomeImage"));
 
 function Home() {
   const { searchData, fetchSearch, loading } = useContext(KryptofolioContext);
-  const grabSearch = useRef();
   const [signIn, setSignIn] = useState(true);
   const [signUp, setSignUp] = useState(true);
 
