@@ -5,8 +5,8 @@ import Market from './components/pages/Market'
 import About from './components/pages/About'
 import Contact from './components/pages/Contact';
 import CoinInfo from './components/CoinDesc/CoinInfo';
-import SignIn from './components/pages/SignIn';
-import SignUp from './components/pages/SignUp';
+// import SignIn from './components/pages/SignIn';
+// import SignUp from './components/pages/SignUp';
 import { KryptofolioProvider } from './components/Context/KryptofolioContext';
 import Footer from './components/layouts/Footer';
 import Icons from './components/layouts/icons';
@@ -25,13 +25,14 @@ import Icons from './components/layouts/icons';
           <Route path='/About' element={<About />} /> 
           <Route path='/Market' element={<Market />} />
           <Route path='/Contact' element={<Contact />} />
-          <Route path='/sign-in' element={<SignIn />} />
-          <Route path='/sign-up' element={<SignUp />} />
+          {/* <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp />} /> */}
           <Route path='/coin/:coinId' element={<CoinInfo />}>
             <Route path=':coinId' />
           </Route>
         </Routes>
       </Router>
+
       <div className='footer-div  flex flex-col items-center'>
           <Icons />
           <Footer/>

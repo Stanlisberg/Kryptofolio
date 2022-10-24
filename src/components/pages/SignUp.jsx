@@ -37,7 +37,7 @@ function SignUp() {
 
   return (
     <div className="max-w-[600px] mx-auto min-h-[500px] px-4 py-10">
-      <h2 className=" pb-6  mt-1 font-bold text-3xl overflow-hidden">
+      <h2 className=" pb-6 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
         Create Account!
       </h2>
       <form className="">
