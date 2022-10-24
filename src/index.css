@@ -211,7 +211,7 @@ body{
 .sign-instead:hover {
   background-color: teal;
   border:1px solid teal;
-  padding: 0 3px;
+  padding: 0 5px;
   border-radius: 4px;
   cursor: pointer;
 }
