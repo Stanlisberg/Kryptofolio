@@ -127,12 +127,12 @@ function SignUp() {
           Forgot Password ?
         </p>
         <div className="text-center mt-6">
-          <submit
+          <button
             type="submit"
             className="border w-full p-2 bg-green text-gray-300 cursor-pointer hover:scale-90 ease-in-out duration-300"
           >
             Sign Up
-          </submit>
+          </button>
         </div>
       </form>
       <div className="flex justify-around mt-3">
