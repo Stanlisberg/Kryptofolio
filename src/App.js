@@ -18,7 +18,7 @@ function App() {
       <KryptofolioProvider>
         <div className="app">
 
-          {/* with the Router component, we are enabling the reac  t routing mechanism */}
+          {/* with the Router component, we are enabling the react routing mechanism */}
           <Router>
             <Navbar />
             <Routes>
