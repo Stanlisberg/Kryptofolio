@@ -1,6 +1,8 @@
 function Profile() {
     return(
-        <div></div>
+        <div>
+            Hey There!
+        </div>
     )
 }
 export default Profile;
