@@ -11,38 +11,38 @@ import { KryptofolioProvider } from './components/Context/KryptofolioContext';
 import Footer from './components/layouts/Footer';
 import Icons from './components/layouts/icons';
 
-  function App() {    
+function App() {
 
   return (
     <>
-    <KryptofolioProvider>
-    <div className="app">
+      <KryptofolioProvider>
+        <div className="app">
 
-{/* with the Router component, we are enabling the reac  t routing mechanism */}
-      <Router>
-         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/About' element={<About />} /> 
-          <Route path='/Market' element={<Market />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/sign-in' element={<SignIn />} />
-          <Route path='/sign-up' element={<SignUp />} />
-          <Route path='/coin/:coinId' element={<CoinInfo />}>
-            <Route path=':coinId' />
-          </Route>
-        </Routes>
-      </Router>
+          {/* with the Router component, we are enabling the reac  t routing mechanism */}
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path='/About' element={<About />} />
+              <Route path='/Market' element={<Market />} />
+              <Route path='/Contact' element={<Contact />} />
+              <Route path='/sign-in' element={<SignIn />} />
+              <Route path='/sign-up' element={<SignUp />} />
+              <Route path='/coin/:coinId' element={<CoinInfo />}>
+                <Route path=':coinId' />
+              </Route>
+            </Routes>
+          </Router>
 
-      <div className='footer-div  flex flex-col items-center'>
-          <Icons />
-          <Footer/>
-          <div className='gecko footer md:mt-3 md:contents hidden border font-mono'>Powered by Coingecko.</div>
-      </div>
-    </div>
-    </KryptofolioProvider>
+          <div className='footer-div  flex flex-col items-center'>
+            <Icons />
+            <Footer />
+            <div className='gecko footer md:mt-3 md:contents hidden border font-mono'>Powered by Coingecko.</div>
+          </div>
+        </div>
+      </KryptofolioProvider>
     </>
-  ); 
+  );
 }
 
 export default App;
