@@ -29,7 +29,7 @@ function Navbar() {
                         <Link to='/Market' className='primary-color link-market pb-2 pl-5 '>
                             Coin-Market
                         </Link>
-                        <Link to='/Market' className='primary-color link-profile pb-2 pl-5 '>
+                        <Link to='/Profile' className='primary-color link-profile pb-2 pl-5 '>
                             Profile
                         </Link>
                         <div className='flex justify-end absolute top-8 right-8'><FaUser size='14' color='#64ffda'/></div>

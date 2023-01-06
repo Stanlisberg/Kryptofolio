@@ -7,6 +7,7 @@ import Contact from './components/pages/Contact';
 import CoinInfo from './components/CoinDesc/CoinInfo';
 import SignIn from './components/pages/SignIn';
 import SignUp from './components/pages/SignUp';
+import Profile from './components/pages/Profile';
 import { KryptofolioProvider } from './components/Context/KryptofolioContext';
 import Footer from './components/layouts/Footer';
 import Icons from './components/layouts/icons';
@@ -28,6 +29,7 @@ function App() {
               <Route path='/Contact' element={<Contact />} />
               <Route path='/sign-in' element={<SignIn />} />
               <Route path='/sign-up' element={<SignUp />} />
+              <Route path='/sign-up' element={<Profile />} />
               <Route path='/coin/:coinId' element={<CoinInfo />}>
                 <Route path=':coinId' />
               </Route>
