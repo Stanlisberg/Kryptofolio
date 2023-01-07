@@ -11,9 +11,9 @@ function Navbar() {
          <div className= 'nav-container mb-5 shadow-lg bg-neutral'>
              <div className='nav-wrapper py-4 md:px-10 px-7'>
                  <div className='nav-logo font-bold text-2xl cursor-pointer md:ml-2 flex items-center overflow-hidden'>
-                     <FaCoins size='21' color='#64ffda'/>
-                     <span className='nav-crypto'>Krypto</span>
-                     <span className='nav-folio'>Folio</span>
+                     <Link to='/'><FaCoins size='21' color='#64ffda'/></Link>
+                     <Link to='/'><span className='nav-crypto'>Krypto</span></Link>
+                     <Link to='/'><span className='nav-folio'>Folio</span></Link>
                  </div>
                     <div className='pt-3'>
                       <div className='hidden md:contents relative'>

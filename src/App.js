@@ -24,12 +24,12 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path='/About' element={<About />} />
+              <Route path='/About' element={<About/>} />
               <Route path='/Market' element={<Market />} />
               <Route path='/Contact' element={<Contact />} />
               <Route path='/sign-in' element={<SignIn />} />
               <Route path='/sign-up' element={<SignUp />} />
-              <Route path='/sign-up' element={<Profile />} />
+              <Route path='/Profile' element={<Profile />} />
               <Route path='/coin/:coinId' element={<CoinInfo />}>
                 <Route path=':coinId' />
               </Route>
