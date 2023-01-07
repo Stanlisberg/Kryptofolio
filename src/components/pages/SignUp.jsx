@@ -1,8 +1,13 @@
 import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa";
 import { useState, useRef } from "react";
+import { useContext } from "react";
+import AuthContext from "../Context/AuthContext";
 
 function SignUp() {
+  const [ name, setName] = useState();
+  const [ email, seEmail ] = useState();
+  const [ error, setError ] = useState(); 
   const [removeNameIcon, setRemoveNameIcon] = useState(true);
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
   const [removePasswordIcon, setRemovePasswordIcon] = useState(true);
@@ -10,6 +15,8 @@ function SignUp() {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
+
+  const { signUp } = useContext(AuthContext);
 
   const clearNameInput = () => {
     if (nameRef.current.value) {
@@ -48,6 +55,7 @@ function SignUp() {
           <div className="my-2 w-full relative rounded-2xl shadow-xl">
             <input
               ref={nameRef}
+              onChange={(e) => console.log(e.target.value)}
               onFocus={() => setRemoveNameIcon(false)}
               onBlur={() => {
                 setRemoveNameIcon(true);
@@ -83,7 +91,7 @@ function SignUp() {
               type="text"
               className="bg-input w-full p-2 rounded-2xl"
               placeholder="Email"
-            />
+            /> 
             {removeEmailIcon === true ? (
               <AiOutlineMail
                 className="absolute left-2 top-3 text-gray-400"
