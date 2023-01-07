@@ -6,10 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
+  -webkit-box-sizing: border-box;
+  -webkit-padding:0;
+  -webkit-margin:0;
   box-sizing: border-box;
   padding:0;
   margin:0;
-  overflow-y: auto;
   /* transition: all .25s ease-in-out; 
   transition-property: all; 
   transition-duration: 0.25s;  
@@ -65,9 +67,9 @@ input::placeholder {
   }
 }
 /*----------custom classes-----------*/
-.div-container {
+/* .div-container {
   @apply rounded-2xl shadow-xl  px-2 max-w-[1140px] w-full mx-auto
-}
+} */
 
 /* Utilities */
 .primary-color{

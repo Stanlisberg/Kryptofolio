@@ -9,6 +9,7 @@ import SignIn from './components/pages/SignIn';
 import SignUp from './components/pages/SignUp';
 import Profile from './components/pages/Profile';
 import { KryptofolioProvider } from './components/Context/KryptofolioContext';
+import { AuthProvider} from './components/Context/AuthContext'
 import Footer from './components/layouts/Footer';
 import Icons from './components/layouts/icons';
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <KryptofolioProvider>
+        <AuthProvider>
         <div className="app">
 
           {/* with the Router component, we are enabling the react routing mechanism */}
@@ -42,6 +44,7 @@ function App() {
             <div className='gecko footer md:mt-3 md:contents hidden border font-mono'>Powered by Coingecko.</div>
           </div>
         </div>
+        </AuthProvider>
       </KryptofolioProvider>
     </>
   );
