@@ -691,4 +691,15 @@ body{
       flex-direction:  column;
       overflow: hidden;
     }
+
+    @media (max-width: 500px) {
+      .sign-bg {
+        max-width: 340px;
+        min-height: 600px;
+      }
+
+      .about-container {
+        max-width: 340px;
+      }
+    }
   }
