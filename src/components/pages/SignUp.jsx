@@ -43,10 +43,10 @@ function SignUp() {
   };
 
   const submitForm= async(e) => {
-    await signUp(name, email, password);
+
+      await signUp(email, password);
 
     e.preventDefault();
-
   }
 
   return (

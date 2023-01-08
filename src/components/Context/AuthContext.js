@@ -12,8 +12,8 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
-  const signUp = (name, email, password) => {
-    createUserWithEmailAndPassword(auth, name, email, password);
+  const signUp = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password);
     console.log(auth.user);
     return setDoc(doc(db, "users", email), {
       watchList: [],
