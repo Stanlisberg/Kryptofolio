@@ -5,9 +5,10 @@ import { useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 
 function SignUp() {
-  const [ name, setName] = useState();
-  const [ email, seEmail ] = useState();
-  const [ error, setError ] = useState(); 
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [error, setError] = useState();
   const [removeNameIcon, setRemoveNameIcon] = useState(true);
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
   const [removePasswordIcon, setRemovePasswordIcon] = useState(true);
@@ -42,12 +43,19 @@ function SignUp() {
     }
   };
 
+  const submitForm= async(e) => {
+    await signUp(name, email, password);
+
+    e.preventDefault();
+
+  }
+
   return (
-    <div className="max-w-[600px] mx-auto min-h-[500px] px-4 py-20">
+    <div className=" sign-bg max-w-[900px] min-h-[550px] my-14 mx-auto px-5 py-3 rounded-lg">
       <h2 className=" pb-6 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
         Create Account!
       </h2>
-      <form className="">
+      <form className="" onSubmit={submitForm}>
         <div className="mt-4 mb-5">
           <label htmlFor="Name" className="text-gray-300">
             Name
@@ -55,7 +63,7 @@ function SignUp() {
           <div className="my-2 w-full relative rounded-2xl shadow-xl">
             <input
               ref={nameRef}
-              onChange={(e) => console.log(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               onFocus={() => setRemoveNameIcon(false)}
               onBlur={() => {
                 setRemoveNameIcon(true);
@@ -76,13 +84,14 @@ function SignUp() {
           </div>
         </div>
 
-        <div className='mb-5'>
+        <div className="mb-5">
           <label htmlFor="Name" className="text-gray-300">
             Email
           </label>
           <div className="my-2 w-full relative rounded-2xl shadow-xl">
             <input
               ref={emailRef}
+              onChange={(e) => setEmail(e.target.value)}
               onFocus={() => setRemoveEmailIcon(false)}
               onBlur={() => {
                 setRemoveEmailIcon(true);
@@ -91,7 +100,7 @@ function SignUp() {
               type="text"
               className="bg-input w-full p-2 rounded-2xl"
               placeholder="Email"
-            /> 
+            />
             {removeEmailIcon === true ? (
               <AiOutlineMail
                 className="absolute left-2 top-3 text-gray-400"
@@ -111,6 +120,7 @@ function SignUp() {
             {/* <div className='max-w-[500px] border'> */}
             <input
               ref={passwordRef}
+              onChange={(e) => setPassword(e.target.value)}
               onFocus={() => setRemovePasswordIcon(false)}
               onBlur={() => {
                 setRemovePasswordIcon(true);

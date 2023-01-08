@@ -202,6 +202,10 @@ body{
   border: 1px solid grey;
 }
 
+.sign-bg {
+  background-color: #15273a;
+}
+
 .sign-in:hover, .sign-up:hover, .sign-instead:hover {
   color:#1f2937;
   transform: scale(0.93);
@@ -221,7 +225,6 @@ body{
   border: 1px solid teal;
   border-radius: 6px;
 }
-
 
 .name {
   position:fixed;
@@ -454,9 +457,7 @@ body{
 /*----------- market----------- */
 .mkt-container{
  max-width: 1250px;
- margin:20px auto;
- /* margin-left: 20px;
- margin-right: 20px; */
+ margin:30px auto;
  padding: 0 10px;
  background-color: #15273a;
 }
