@@ -1,7 +1,6 @@
 import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa";
-import { useState, useRef } from "react";
-import { useContext } from "react";
+import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 
 function SignUp() {
@@ -55,7 +54,7 @@ function SignUp() {
       <h2 className=" pb-6 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
         Create Account!
       </h2>
-      <form className="" onSubmit={submitForm}>
+      <form onSubmit={submitForm}>
         <div className="mt-4 mb-5">
           <label htmlFor="Name" className="text-gray-300">
             Name
