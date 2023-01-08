@@ -1,7 +1,7 @@
 function About() {
   return (
     <div>
-      <div className="about-container bg-gray my-10 border rounded-xl mx-auto max-w-7xl">
+      <div className="about-container my-10 py-8 rounded-lg mx-auto max-w-[1200px]">
         <div className='primary-color mx-7 my-6 font-mono text-2xl text-white-500 text-center'>About KryptoFolio...</div>
         <p className="mx-7 my-6 text-justify font-md">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quia

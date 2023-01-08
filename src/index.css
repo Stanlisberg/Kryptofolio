@@ -100,7 +100,8 @@ input::placeholder {
 }
 
 .about-container{
-  background: #0b1e36
+  /* background: #0b1e36 */
+  background-color: #15273a;
 }
 
 .bg-input{
@@ -456,11 +457,16 @@ body{
 
 /*----------- market----------- */
 .mkt-container{
- max-width: 1250px;
+ /* max-width: 1250px;
  margin:30px auto;
- padding: 0 10px;
+ padding: 0 10px; */
  background-color: #15273a;
 }
+
+/* .hey {
+  border: 1px solid black;
+  margin-top: 5px;
+} */
 
 .mkt-heading {
   color: #ccd6f6;
@@ -484,7 +490,7 @@ body{
 }
 
 .trend-container {
-  max-width: 1250px;
+  max-width: 1200px;
   background-color: #15273a;
 }
 
