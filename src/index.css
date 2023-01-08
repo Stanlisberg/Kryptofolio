@@ -203,7 +203,8 @@ body{
   border: 1px solid grey;
 }
 
-.sign-bg {
+.sign-bg,
+.nav-slide-bg {
   background-color: #15273a;
 }
 

@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password);
-    console.log(auth.user);
+    console.log(auth.currentUser);
     return setDoc(doc(db, "users", email), {
       watchList: [],
     });
