@@ -3,8 +3,8 @@ import { useContext,  useState } from "react";
 import { Link } from "react-router-dom";
 import BitcoinChart from "../HomeCoinChart/BitcoinChart";
 import KryptofolioContext from "../Context/KryptofolioContext";
-// import HomeImage from "../image/HomeImage";
-const LazyAbout = React.lazy(() => import("../image/HomeImage"));
+import HomeImage from "../image/HomeImage";
+// const LazyAbout = React.lazy(() => import("../image/HomeImage"));
 
 function Home() {
   const { searchData, fetchSearch, loading } = useContext(KryptofolioContext);

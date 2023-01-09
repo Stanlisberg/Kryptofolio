@@ -1,6 +1,6 @@
 function Contact() {
     return(
-        <div>Contact Us</div>
+        <div className="min-h-full">Contact Us</div>
     )
 }
 export default Contact;

@@ -1,15 +1,20 @@
 import AuthContext from "../Context/AuthContext";
 import { useContext } from "react";
+import { useNavigate } from 'react-router-dom'
 
 function Profile() {
   const { logOut, user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const logOutUser = async() => { 
+    
+    try{
       await logOut()
-      // navigate('/')
-      // .catch((e) => {
-      //   console.log(e.message)
-      // })
+      navigate('/')
+    } catch(e){
+      console.log(e.message)
+    }
+     
   }
 
   console.log(user?.email);

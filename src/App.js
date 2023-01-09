@@ -17,7 +17,6 @@ function App() {
   return (
     <>
       <KryptofolioProvider>
-        {/* <AuthProvider> */}
           <Router>
           <AuthProvider>
           <div className="app">
@@ -48,7 +47,6 @@ function App() {
           </div>
            </AuthProvider>
           </Router>
-        {/* </AuthProvider> */}
       </KryptofolioProvider>
     </>
   );

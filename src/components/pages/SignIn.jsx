@@ -1,12 +1,28 @@
 import { AiOutlineMail, AiFillLock } from "react-icons/ai";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import AuthContext from "../Context/AuthContext";
 
 function SignIn() {
+  const { signIn } = useContext(AuthContext);
+
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
   const [removePasswordIcon, setRemovePasswordIcon] = useState(true);
+  const [ password, setPassword] = useState();
+  const [ email, setEmail ] = useState()
 
   const emailRef = useRef();
   const passwordRef = useRef();
+
+  const handleSubmit = async(e) => {
+    try{
+      await signIn(email, password);
+    }catch(e) {
+      console.log(e.message)
+      alert(e.message)
+    }
+
+    e.preventDefault();
+  }
 
   const clearEmailInput = () => {
     if (emailRef.current.value) {
@@ -32,7 +48,7 @@ function SignIn() {
       <div>
         
       </div>
-      <form className="mt-5">
+      <form className="mt-5" onSubmit={handleSubmit}>
         <div className='mb-6'> 
           <label htmlFor="Name" className="text-gray-300">
             Email
@@ -41,6 +57,7 @@ function SignIn() {
             <input
               ref={emailRef}
               onFocus={() => setRemoveEmailIcon(false)}
+              onChange={(e) => setEmail(e.target.value)}
               onBlur={() => {
                 setRemoveEmailIcon(true);
                 clearEmailInput();
@@ -68,6 +85,7 @@ function SignIn() {
             <input
               ref={passwordRef}
               onFocus={() => setRemovePasswordIcon(false)}
+              onChange={(e) => setPassword(e.target.value)}
               onBlur={() => {
                 setRemovePasswordIcon(true);
                 clearPasswordInput();
