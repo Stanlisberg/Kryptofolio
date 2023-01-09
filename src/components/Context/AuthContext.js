@@ -13,8 +13,13 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const signUp = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password);
-    console.log(auth.currentUser);
+    createUserWithEmailAndPassword(auth, email, password)
+    .then(response => {
+      console.log(response.user)
+    })
+    .catch((e) => {
+      alert(e.message)
+    })
     return setDoc(doc(db, "users", email), {
       watchList: [],
     });
@@ -31,6 +36,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      console.log(currentUser);
     });
 
     return unsubscribe();

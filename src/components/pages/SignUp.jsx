@@ -42,9 +42,8 @@ function SignUp() {
     }
   };
 
-  const submitForm= async(e) => {
-
-      await signUp(email, password);
+  const submitForm= (e) => {
+      signUp(email, password);
 
     e.preventDefault();
   }
