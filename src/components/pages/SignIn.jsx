@@ -13,9 +13,9 @@ function SignIn() {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = (e) => {
     try{
-      await signIn(email, password);
+      signIn(email, password);
     }catch(e) {
       console.log(e.message)
       alert(e.message)
@@ -46,9 +46,8 @@ function SignIn() {
         Welcome Back!
       </h2>
       <div>
-        
       </div>
-      <form className="mt-5" onSubmit={handleSubmit}>
+      <form className="mt-5" onSubmit={ handleSubmit }>
         <div className='mb-6'> 
           <label htmlFor="Name" className="text-gray-300">
             Email

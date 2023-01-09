@@ -6,11 +6,10 @@ function Profile() {
   const { logOut, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const logOutUser = async() => { 
-    
+  const logOutUser = () => { 
+
     try{
-      await logOut()
-      navigate('/')
+      logOut()
     } catch(e){
       console.log(e.message)
     }

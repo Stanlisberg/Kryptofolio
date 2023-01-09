@@ -31,22 +31,31 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signIn = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password);
-  };
+     signInWithEmailAndPassword(auth, email, password)
+    .then((response) => {
+      console.log(response.user)
+    })
+  }
 
   const logOut = () => {
-    return signOut(auth)
+     signOut(auth)
+     .then(() => {
+     })
     
   }
 
-  useEffect(() => {
-    const subscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      console.log(currentUser);
-    });
+  // useEffect(() => {
+  //   const subscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUser(currentUser);
+  //     console.log(currentUser);
+  //   });
 
-    return subscribe();
-  }, []);
+  //   return subscribe();
+  // }, []);
+
+  onAuthStateChanged(auth, (user) => {
+    setUser(user)
+  })
 
   return (
     <AuthContext.Provider
