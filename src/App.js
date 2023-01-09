@@ -17,10 +17,12 @@ function App() {
   return (
     <>
       <KryptofolioProvider>
-        <AuthProvider>
+        {/* <AuthProvider> */}
+          <Router>
+          <AuthProvider>
           <div className="app">
             {/* with the Router component, we are enabling the react routing mechanism */}
-            <Router>
+            {/* <Router> */}
               <Navbar />
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -34,7 +36,7 @@ function App() {
                   <Route path=":coinId" />
                 </Route>
               </Routes>
-            </Router>
+            {/* </Router> */}
 
             <div className="footer-div  flex flex-col items-center">
               <Icons />
@@ -44,7 +46,9 @@ function App() {
               </div>
             </div>
           </div>
-        </AuthProvider>
+           </AuthProvider>
+          </Router>
+        {/* </AuthProvider> */}
       </KryptofolioProvider>
     </>
   );

@@ -97,9 +97,9 @@ function Home() {
           </div>
           <div className="lg:relative mt-10 lg:mt-0">
             {/* <HomeImage /> */}
-            <React.Suspense fallback="Loading...">
+            {/* <React.Suspense fallback="Loading...">
               <LazyAbout />
-            </React.Suspense>
+            </React.Suspense> */}
           </div>
         </div>
       </section>
