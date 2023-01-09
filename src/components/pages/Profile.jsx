@@ -3,11 +3,15 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Profile() {
-  const { logout, user } = useContext(AuthContext);
+  const { logOut, user } = useContext(AuthContext);
   const navigate = useNavigate()
-  const logOutUser = () => {
-    logout()
-    navigate('/')
+
+  const logOutUser = async() => { 
+      await logOut();
+      navigate('/')
+      .catch((e) => {
+        console.log(e.message)
+      })
   }
 
   return (
@@ -21,7 +25,7 @@ function Profile() {
         </div>
         <div>
           <button
-            onClick={logOutUser}
+            onClick={ logOutUser }
             className="border px-4 py-1 rounded-2xl shadow-lg hover:shadow-2xl"
           >
             Sign Out

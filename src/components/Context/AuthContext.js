@@ -7,20 +7,25 @@ import {
   signOut,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
+  const navigate = useNavigate();
+
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
     .then(response => {
       console.log(response.user)
+      alert('Account created!')
+      navigate('/')
     })
     .catch((e) => {
       alert(e.message)
     })
-    return setDoc(doc(db, "users", email), {
+    return setDoc(doc(db, "users", email), { 
       watchList: [],
     });
   };
@@ -29,9 +34,10 @@ export const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const logout = () => {
-    return signOut(auth);
-  };
+  const logOut = () => {
+    return signOut(auth)
+    
+  }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -47,7 +53,7 @@ export const AuthProvider = ({ children }) => {
       value={{
         signUp,
         signIn,
-        logout,
+        logOut,
         user,
       }}
     >
