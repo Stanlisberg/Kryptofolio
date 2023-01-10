@@ -1,6 +1,7 @@
 import React from "react";
-import { useContext,  useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
 import BitcoinChart from "../HomeCoinChart/BitcoinChart";
 import KryptofolioContext from "../Context/KryptofolioContext";
 import AuthContext from "../Context/AuthContext";
@@ -11,8 +12,13 @@ function Home() {
   const { searchData, fetchSearch, loading } = useContext(KryptofolioContext);
   const [signIn, setSignIn] = useState(true);
   const [signUp, setSignUp] = useState(true);
+  const [over, setOver] = useState(false);
 
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const logOutProfile = () => {
+    logOut();
+  };
 
   return (
     <>
@@ -60,7 +66,7 @@ function Home() {
               );
             }
           })} */}
-          {/* <div className="name pt-3 grid items-center justify-center h-screen ease-in duration-300">
+        {/* <div className="name pt-3 grid items-center justify-center h-screen ease-in duration-300">
           <div className=" contents md:hidden ">
             <Link to="/" className="primary-color link pl-5 ">
               Home
@@ -76,33 +82,45 @@ function Home() {
             </Link>
           </div>
           </div> */}
-          { user?.email? (
-            <div className="flex justify-end mr-4 mt-3">
-              <Link to='/Profile'>
-                <button className={signIn ? "sign-in" : "sign-up"}>Profile</button>
-              </Link>
-              <Link to='sign-up'>
-                <button className={signUp ? "sign-up" : "sign-in"}>Sign Out</button>
-              </Link>
-            </div>
-            ) : (
-            <div className="flex justify-end mr-4 mt-3">
-              <Link to='sign-in'>
-                <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>
-              </Link>
-              <Link to='sign-up'>
-                <button className={signUp ? "sign-up" : "sign-in"}>Sign Up</button>
-              </Link>
-            </div>
-          )}
-        <div className="flex justify-end mr-4 mt-3">
-          <Link to='sign-in'>
-            <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>
-          </Link>
-          <Link to='sign-up'>
-            <button className={signUp ? "sign-up" : "sign-in"}>Sign Up</button>
-          </Link>
-        </div>
+        {user?.email ? (
+          <div className="flex justify-end mr-4 mt-3">
+            <Link to="/Profile">
+              <button
+                className="profile"
+                onMouseOver={() => setOver(true)}
+                onMouseLeave={() => setOver(false)}
+              >
+                Profile
+                <span className="ml-1">
+                  <FaUser
+                    size="14"
+                    color="#64ffda"
+                    style={over ? { color: "#1f2937" } : ""}
+                  />
+                </span>
+              </button>
+            </Link>
+            <button
+              onClick={logOutProfile}
+              className={signUp ? "sign-out" : "sign-up"}
+            >
+              Sign Out
+            </button>
+          </div>
+        ) : (
+          <div className="flex justify-end mr-4 mt-3">
+            <Link to="sign-in">
+              <button className={signIn ? "sign-up" : "sign-in"}>
+                Sign In
+              </button>
+            </Link>
+            <Link to="sign-up">
+              <button className={signUp ? "sign-in" : "sign-up"}>
+                Sign Up
+              </button>
+            </Link>
+          </div>
+        )}
         <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden">
           <div className="overview-trans text-center mx-auto w-full lg:text-start overflow-hidden">
             <h1 className="overview-heading mx-auto overflow-x-hidden mt-10 lg:mt-0">
@@ -153,7 +171,7 @@ function Home() {
             <img src="logos/crypto.svg" width="120" />
           </div>
         </div>
-       </div>
+      </div>
     </>
   );
 }

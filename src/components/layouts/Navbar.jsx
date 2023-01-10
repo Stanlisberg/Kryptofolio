@@ -17,22 +17,22 @@ function Navbar() {
           </div>
           <div className="pt-3">
             <div className="hidden md:contents relative">
-              <Link to="/" className="primary-color link pl-5 ">
+              <Link to="/" className="primary-color link pl-5">
                 Home
               </Link>
               <Link to="/About" className="primary-color link pl-5 ">
                 About
               </Link>
-              <Link to="/Contact" className="primary-color link pl-5 ">
+              <Link to="/Contact" className="primary-color link pl-5">
                 Contact
               </Link>
               <Link
                 to="/Market"
-                className="primary-color link-market pb-2 pl-5 "
+                className="primary-color link-market pb-2 pl-5 pr-5 "
               >
                 Coin-Market
               </Link>
-              <Link
+              {/* <Link
                 to="/Profile"
                 className="primary-color link-profile pb-2 pl-5 "
               >
@@ -40,7 +40,7 @@ function Navbar() {
               </Link>
               <div className="flex justify-end absolute top-8 right-8">
                 <FaUser size="14" color="#64ffda" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="pt-1 md:hidden ml-3 block cursor-pointer z-10">
