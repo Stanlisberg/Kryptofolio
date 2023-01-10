@@ -52,10 +52,12 @@ export const AuthProvider = ({ children }) => {
 
   //   return subscribe();
   // }, []);
+  useEffect(() => {
 
-  onAuthStateChanged(auth, (user) => {
-    setUser(user)
-  })
+    onAuthStateChanged(auth, (user) => {
+      setUser(user)
+    })
+  },[])
 
   return (
     <AuthContext.Provider

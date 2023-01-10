@@ -2,6 +2,7 @@ import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [name, setName] = useState();
@@ -17,6 +18,8 @@ function SignUp() {
   const passwordRef = useRef();
 
   const { signUp } = useContext(AuthContext);
+  
+  const navigate = useNavigate()
 
   const clearNameInput = () => {
     if (nameRef.current.value) {
@@ -44,6 +47,7 @@ function SignUp() {
 
   const submitForm= (e) => {
       signUp(email, password);
+      navigate('/')
 
     e.preventDefault();
   }

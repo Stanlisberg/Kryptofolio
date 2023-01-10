@@ -10,6 +10,7 @@ function Profile() {
 
     try{
       logOut()
+      navigate('/')
     } catch(e){
       console.log(e.message)
     }

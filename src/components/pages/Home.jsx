@@ -3,6 +3,7 @@ import { useContext,  useState } from "react";
 import { Link } from "react-router-dom";
 import BitcoinChart from "../HomeCoinChart/BitcoinChart";
 import KryptofolioContext from "../Context/KryptofolioContext";
+import AuthContext from "../Context/AuthContext";
 import HomeImage from "../image/HomeImage";
 // const LazyAbout = React.lazy(() => import("../image/HomeImage"));
 
@@ -10,6 +11,8 @@ function Home() {
   const { searchData, fetchSearch, loading } = useContext(KryptofolioContext);
   const [signIn, setSignIn] = useState(true);
   const [signUp, setSignUp] = useState(true);
+
+  const { user } = useContext(AuthContext);
 
   return (
     <>
@@ -73,6 +76,25 @@ function Home() {
             </Link>
           </div>
           </div> */}
+          { user?.email? (
+            <div className="flex justify-end mr-4 mt-3">
+              <Link to='/Profile'>
+                <button className={signIn ? "sign-in" : "sign-up"}>Profile</button>
+              </Link>
+              <Link to='sign-up'>
+                <button className={signUp ? "sign-up" : "sign-in"}>Sign Out</button>
+              </Link>
+            </div>
+            ) : (
+            <div className="flex justify-end mr-4 mt-3">
+              <Link to='sign-in'>
+                <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>
+              </Link>
+              <Link to='sign-up'>
+                <button className={signUp ? "sign-up" : "sign-in"}>Sign Up</button>
+              </Link>
+            </div>
+          )}
         <div className="flex justify-end mr-4 mt-3">
           <Link to='sign-in'>
             <button className={signIn ? "sign-in" : "sign-up"}>Sign In</button>

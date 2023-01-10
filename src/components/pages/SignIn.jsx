@@ -1,9 +1,10 @@
 import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, user } = useContext(AuthContext);
 
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
   const [removePasswordIcon, setRemovePasswordIcon] = useState(true);
@@ -13,13 +14,23 @@ function SignIn() {
   const emailRef = useRef();
   const passwordRef = useRef();
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
-    try{
+    // try{
+    //   signIn(email, password);
+    //   navigate('/Profile')
+    // }catch(e) {
+    //   console.log(e.message)
+    //   alert(e.message)
+    // }
       signIn(email, password);
-    }catch(e) {
-      console.log(e.message)
-      alert(e.message)
-    }
+
+      navigate('/Profile')
+     .catch((e) => {
+      console.log(e.message);
+      alert(e.message);
+     })
 
     e.preventDefault();
   }
