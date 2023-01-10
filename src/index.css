@@ -121,6 +121,14 @@ input::placeholder {
  overflow: hidden;
 }
 
+.click {
+  color: teal;
+}
+
+.click:hover {
+  border-bottom: 1px solid teal;
+}
+
 body{
   /* background:  #111827; */
   background:  #08192B;
@@ -235,19 +243,17 @@ body{
 
 
 .profile:hover {
-  background:#64ffda;
+  /* background:#64ffda; */
+  background: teal;
   color:#1f2937;
 }
 
 .sign-out:hover {
-  background:#64ffda;
+  /* background:#64ffda; */
+  background: teal;
   color:#1f2937;
 }
 
-.profile:logo {
-  color:#1f2937;
-
-}
 .sign-bg,
 .nav-slide-bg {
   background-color: #15273a;
@@ -649,13 +655,15 @@ body{
 
 /*------------footer----------------*/
 .footer-color {
-  color: #64ffda;
+  /* color: #64ffda; */
+  color: teal;
   transition: transform 0.4s ease-in;
 }
 
 .footer-color:hover {
   transform: translateY(-13px);
-  background: #64ffda;
+  /* background: #64ffda; */
+  background: teal;
   font-weight: bold;
   color: #1f2937;
   border-radius: 4px;

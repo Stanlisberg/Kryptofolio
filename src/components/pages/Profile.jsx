@@ -1,6 +1,7 @@
 import AuthContext from "../Context/AuthContext";
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom'
+import SavedCoin from "../AllCoins/SavedCoin";
 
 function Profile() {
   const { logOut, user } = useContext(AuthContext);
@@ -23,7 +24,7 @@ function Profile() {
     <div className="max-w-[1000px] mx-auto">
       <div className="flex justify-between items-center my-8 rounded-2xl py-8">
         <div>
-          <h1 className="text-2xl font-bold">Account</h1>
+          <h1 className="text-2xl font-bold">Account :</h1>
           <div>
             <p>Welcome, {user?.email}</p>
           </div>
@@ -40,6 +41,7 @@ function Profile() {
       <div className="flex justify-between items-center my-12 py-8 rounded-div">
         <div className="w-full min-h-[300px]">
           <h1 className="text-2xl font-bold py-4">Watch List</h1>
+          <SavedCoin />
         </div>
       </div>
     </div>

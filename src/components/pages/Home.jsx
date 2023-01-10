@@ -94,7 +94,8 @@ function Home() {
                 <span className="ml-1">
                   <FaUser
                     size="14"
-                    color="#64ffda"
+                    // color="#64ffda"
+                    color='teal'
                     style={over ? { color: "#1f2937" } : ""}
                   />
                 </span>
