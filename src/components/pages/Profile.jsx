@@ -25,9 +25,6 @@ function Profile() {
       <div className="flex justify-between items-center my-8 rounded-2xl py-8">
         <div>
           <h1 className="text-2xl font-bold">Account :</h1>
-          <div>
-            <p>Welcome, <span style={{color:"teal"}}>{user?.email}</span></p>
-          </div>
         </div>
         <div>
           <button
@@ -35,11 +32,22 @@ function Profile() {
             className="profile-sign px-2 py-1 shadow-lg hover:shadow-2xl hover:bg-slate-600 hover:color font-bold"
           >
             Sign Out
-          </button>
-          <div>
-             ...
-          </div>
+          </button> 
+
+          {/* <div>
+            <p>Welcome, <span style={{color:"teal"}}>{user?.email}</span></p>
+          </div> */}
+          {/* <button
+            onClick={ logOutUser }
+            className="profile-sign px-2 py-1 shadow-lg hover:shadow-2xl hover:bg-slate-600 hover:color font-bold"
+          >
+            Sign Out
+          </button> */}
+           {/* <p>Welcome, <span style={{color:"teal"}}>{user?.email}</span></p> */}
         </div>
+          {/* <div>
+            <p>Welcome, <span style={{color:"teal"}}>{user?.email}</span></p>
+          </div> */}
       </div>
       <div className="flex justify-between items-center my-12 py-8 rounded-div">
         <div className="w-full min-h-[300px]">

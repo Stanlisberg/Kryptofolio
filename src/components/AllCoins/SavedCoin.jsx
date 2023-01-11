@@ -11,7 +11,8 @@ function SavedCoin () {
 
     useEffect(() => {
       onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
-        setCoins(doc.data().watchList)
+        setCoins(doc.data()?.watchList)
+        console.log(doc.data())
       })
     },[user?.email])
 
