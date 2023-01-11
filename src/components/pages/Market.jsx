@@ -7,6 +7,7 @@ import { Audio, ThreeDots, BallTriangle } from "react-loader-spinner";
 
 function Market() {
   const { fetchAllCoins, allCoins, loading } = useContext(KryptofolioContext);
+
   const [searchCoins, setSearchCoins] = useState("");
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -28,6 +29,7 @@ function Market() {
     fetchAllCoins();
     console.log(allCoins);
   }, []);
+
   return (
     <>
       <div className="mkt-container max-w-[1200px] rounded-md my-8 mx-auto py-0 px-3">
@@ -52,12 +54,18 @@ function Market() {
           <table className="w-full border-collapse text-center">
             <thead>
               <tr className="primary-color border-b">
-                <th className="text-start">BM</th>
+                <th className=''
+                    style={{
+                      color: "yellowgreen",
+                    }}
+                    >
+                      BM
+                    </th>
                 <th className="px-4">#</th>
                 <th
                   className="text-start"
                   style={{
-                    color: "#64ffda",
+                    color: "teal",
                   }}
                 >
                   Coins

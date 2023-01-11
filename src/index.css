@@ -241,11 +241,18 @@ body{
   /* color: #64ffda; */
 }
 
+.profile-sign {
+  border-radius: 6px;
+}
 
 .profile:hover {
   /* background:#64ffda; */
   background: teal;
   color:#1f2937;
+}
+
+.profile-sign:hover {
+  color: #1f2937;
 }
 
 .sign-out:hover {
@@ -755,5 +762,11 @@ body{
       .about-container {
         max-width: 340px;
       }
+    }
+
+    @media (max-width: 400px) {
+      .profile-detail {
+        max-width: 320px;
+        color:      }
     }
   }

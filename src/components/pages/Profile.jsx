@@ -21,26 +21,29 @@ function Profile() {
   console.log(user?.email);
 
   return (
-    <div className="max-w-[1000px] mx-auto">
+    <div className="profile-detail max-w-[1000px] mx-auto">
       <div className="flex justify-between items-center my-8 rounded-2xl py-8">
         <div>
           <h1 className="text-2xl font-bold">Account :</h1>
           <div>
-            <p>Welcome, {user?.email}</p>
+            <p>Welcome, <span style={{color:"teal"}}>{user?.email}</span></p>
           </div>
         </div>
         <div>
           <button
             onClick={ logOutUser }
-            className="border px-4 py-1 rounded-2xl shadow-lg hover:shadow-2xl"
+            className="profile-sign px-2 py-1 shadow-lg hover:shadow-2xl hover:bg-slate-600 hover:color font-bold"
           >
             Sign Out
           </button>
+          <div>
+             ...
+          </div>
         </div>
       </div>
       <div className="flex justify-between items-center my-12 py-8 rounded-div">
         <div className="w-full min-h-[300px]">
-          <h1 className="text-2xl font-bold py-4">Watch List</h1>
+          <h1 className="text-2xl font-bold py-4">WatchList</h1>
           <SavedCoin />
         </div>
       </div>
