@@ -10,11 +10,11 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
-
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const navigate = useNavigate();
 
+  // Sign Up
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
     .then(response => {
@@ -30,6 +30,7 @@ export const AuthProvider = ({ children }) => {
     });
   };
 
+  // Sign In
   const signIn = (email, password) => {
      signInWithEmailAndPassword(auth, email, password)
     .then((response) => {
@@ -37,23 +38,15 @@ export const AuthProvider = ({ children }) => {
     })
   }
 
+  // Log Out
   const logOut = () => {
      signOut(auth)
      .then(() => {
      })
-    
   }
 
-  // useEffect(() => {
-  //   const subscribe = onAuthStateChanged(auth, (currentUser) => {
-  //     setUser(currentUser);
-  //     console.log(currentUser);
-  //   });
-
-  //   return subscribe();
-  // }, []);
+  // Check if user is logged in
   useEffect(() => {
-
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser)
     })

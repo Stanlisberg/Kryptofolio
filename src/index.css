@@ -255,6 +255,10 @@ body{
   color: #1f2937;
 }
 
+.profile-info {
+  background: #15273a;
+  /* color: red */
+}
 .sign-out:hover {
   /* background:#64ffda; */
   background: teal;

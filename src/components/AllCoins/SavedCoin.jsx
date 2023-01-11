@@ -9,6 +9,7 @@ function SavedCoin () {
     const [ coins, setCoins] = useState([])
     const { user } = useContext(AuthContext);
 
+    // UseEffect for adding coins to the watchlist array in the ui
     useEffect(() => {
       onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
         setCoins(doc.data()?.watchList)
@@ -16,6 +17,14 @@ function SavedCoin () {
       })
     },[user?.email])
 
+    // Delete coin from firestore watchList array and ui
+    const coinPath = doc(db, "users", `${user?.email}`);
+    const deleteCoin = async(passedId) => {
+    const result = coins.filter((item) => item.id !== passedId)
+    await updateDoc(coinPath, {
+        watchList : result
+      })
+    }
     return(
      <div>
         {coins?.length === 0 ? (
@@ -32,7 +41,7 @@ function SavedCoin () {
                   </tr>
                </thead>
                <tbody>
-                 {coins.map(coin => (
+                 {coins?.map(coin => (
                    <tr key={coin.id} className='h-[60px] overflow-hidden'>
                      <td>{coin?.rank}</td>
                      <td>
@@ -44,7 +53,10 @@ function SavedCoin () {
                         </Link>
                      </td>
                      <td className='pl-8'>
-                        <FaTimes className='cursor-pointer'/>
+                        <FaTimes 
+                          className='cursor-pointer'
+                          onClick={() => {deleteCoin(coin.id)}}
+                        />
                     </td>
                    </tr>
                  ))}

@@ -11,6 +11,8 @@ function MarketItem({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
 
   const coinLocation = doc(db, "users", `${user?.email}`);
+  
+  // Update firestore watchlist
   const saveCoin = async () => {
     if (user?.email) {
       setSavedCoin(true);
