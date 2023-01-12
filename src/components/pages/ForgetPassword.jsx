@@ -2,31 +2,23 @@ import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
+import { sendPasswordResetEmail} from 'firebase/auth'
+import { toast } from 'react-toastify'
+import { auth } from "../../firebase";
 
 function ForgetPassword() {
   const { signIn, user } = useContext(AuthContext);
 
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
-  const [removePasswordIcon, setRemovePasswordIcon] = useState(true);
-  const [ password, setPassword] = useState();
   const [ email, setEmail ] = useState()
 
   const emailRef = useRef();
-  const passwordRef = useRef();
-
   const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
-    // try{
-    //   signIn(email, password);
-    //   navigate('/Profile')
-    // }catch(e) {
-    //   console.log(e.message)
-    //   alert(e.message)
-    // }
-      signIn(email, password);
-
-      navigate('/Profile')
+  const handleSubmit = async (e) => {
+    //   navigate('/')
+      await sendPasswordResetEmail(auth, user?.email)
+      toast.success('Email was sent')
      .catch((e) => {
       console.log(e.message);
       alert(e.message);
@@ -40,14 +32,6 @@ function ForgetPassword() {
       setRemoveEmailIcon(false);
     } else {
       setRemoveEmailIcon(true);
-    }
-  };
-
-  const clearPasswordInput = () => {
-    if (passwordRef.current.value) {
-      setRemovePasswordIcon(false);
-    } else {
-      setRemovePasswordIcon(true);
     }
   };
 

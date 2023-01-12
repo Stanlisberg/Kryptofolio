@@ -144,7 +144,7 @@ function SignUp() {
           </div>
         </div>
         <Link to='/Forget-password'>
-        <p className="flex justify-end mt-5 color-green cursor-pointer">
+        <p className="flex justify-end mt-5 hover:text-gray-300 color-green cursor-pointer">
           Forgot Password ?
         </p>
         </Link>
