@@ -17,7 +17,7 @@ function Market() {
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(allCoins?.slice(itemOffset, endOffset));
-    setPageCount((Math.ceil(allCoins?.length / itemsPerPage)));
+    setPageCount(Math.ceil(allCoins?.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, allCoins]);
 
   const handlePageClick = (event) => {
@@ -32,7 +32,7 @@ function Market() {
 
   return (
     <>
-      <div className="mkt-container max-w-[1000px] rounded-md my-8 mx-auto py-0 px-3">
+      <div className="mkt-container rounded-md my-8 mx-auto py-0 px-3 max-w-[1200px]">
         <div className=" text-center pt-5 text-2xl rounded-lg text-zinc-50">
           Cryptocurrency Prices By Market Cap.
         </div>
@@ -50,17 +50,18 @@ function Market() {
         <div>
           <h1 className="font-bold mb-3">All Categories</h1>
         </div>
-        <div className=''>
-          <table className="w-full border-collapse text-center">
+        <div className="">
+          <table className=" text-center border-collapse w-full">
             <thead>
               <tr className="primary-color border-b">
-                <th className=''
-                    style={{
-                      color: "yellowgreen",
-                    }}
-                    >
-                      BM
-                    </th>
+                <th
+                  className=""
+                  style={{
+                    color: "yellowgreen",
+                  }}
+                >
+                  BM
+                </th>
                 <th className="px-4">#</th>
                 <th
                   className="text-start"
@@ -72,7 +73,9 @@ function Market() {
                 </th>
                 <th className="hidden md:table-cell">Symbol</th>
                 <th>Price</th>
-                <th>24h<span className='hidden md:contents'> Price change</span></th>
+                <th>
+                  24h<span className="hidden md:contents"> Price change</span>
+                </th>
                 <th className="hidden md:table-cell">24h Vol</th>
                 <th
                   className=""
@@ -82,10 +85,13 @@ function Market() {
                 >
                   Mkt Cap
                 </th>
-                <th><span className='hidden md:contents'>Price graph</span> (7 Days)</th>
+                <th>
+                  <span className="hidden md:contents">Price graph</span> (7
+                  Days)
+                </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className='hey'>
               {currentItems &&
                 currentItems.length > 0 &&
                 currentItems
@@ -105,14 +111,14 @@ function Market() {
           </table>
         </div>
       </div>
-      {loading ? (<div className='loading text-center font-bold font- text-green-300'>Loading...</div>) : ('')}
-      {/* {loading ? (
-        <div className="flex justify-center">
-          <ThreeDots height="50" width="100" color="green" />
+      {loading ? (
+        <div className="loading text-center font-bold font- text-green-300">
+          Loading...
         </div>
       ) : (
-        null
-      )} */}
+        ""
+      )}
+
       <ReactPaginate
         breakLabel="..."
         nextLabel="Next >"

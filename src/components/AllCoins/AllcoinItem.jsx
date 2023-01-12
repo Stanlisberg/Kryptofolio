@@ -11,7 +11,7 @@ function MarketItem({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
 
   const coinLocation = doc(db, "users", `${user?.email}`);
-  
+
   // Update firestore watchlist
   const saveCoin = async () => {
     if (user?.email) {
@@ -24,19 +24,17 @@ function MarketItem({ coin }) {
           rank: coin.market_cap_rank,
           symbol: coin.symbol,
         }),
-      })
+      });
     } else {
-      alert("please sign in to save a coin to your watch list");
+      alert("please sign in to save a coin to your watch list!");
     }
   };
 
   return (
     <>
-      <tr className="tr-container height-80 border-b overflow-hidden px-1 mx-1">
-        <td 
-          className={'cursor-pointer'}
-          onClick={saveCoin}>
-            {savedCoin ? <AiFillStar color='yellowgreen'/> : <AiOutlineStar />}
+      <tr className="tr-container h-[800px] border-b overflow-scroll px-1 mx-1">
+        <td className="cursor-pointer" onClick={saveCoin}>
+          {savedCoin ? <AiFillStar color="yellowgreen" /> : <AiOutlineStar />}
         </td>
         <td>{coin.market_cap_rank}</td>
         <td className="">

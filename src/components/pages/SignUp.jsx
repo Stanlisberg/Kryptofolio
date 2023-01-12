@@ -2,7 +2,7 @@ import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function SignUp() {
   const [name, setName] = useState();
@@ -157,9 +157,11 @@ function SignUp() {
       </form>
       <div className="flex justify-around mt-3">
         <p className="text-gray-300">Aready have an account?</p>
+        <Link to='/sign-in'>
         <div className="sign-instead hover:text-gray-300 color-green">
           Sign In Instead
         </div>
+        </Link>
       </div>
     </div>
   );
