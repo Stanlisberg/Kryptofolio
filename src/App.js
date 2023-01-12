@@ -8,6 +8,7 @@ import CoinInfo from "./components/CoinDesc/CoinInfo";
 import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
 import Profile from "./components/pages/Profile";
+import ForgetPassword from "./components/pages/ForgetPassword";
 import { KryptofolioProvider } from "./components/Context/KryptofolioContext";
 import { AuthProvider } from "./components/Context/AuthContext";
 import Footer from "./components/layouts/Footer";
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/sign-in" element={<SignIn />} />
                 <Route path="/sign-up" element={<SignUp />} />
                 <Route path="/Profile" element={<Profile />} />
+                <Route path="/Forget-password" element={<ForgetPassword />} />
                 <Route path="/coin/:coinId" element={<CoinInfo />}>
                   <Route path=":coinId" />
                 </Route>

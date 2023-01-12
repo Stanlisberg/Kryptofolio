@@ -3,7 +3,7 @@ import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 
-function SignIn() {
+function ForgetPassword() {
   const { signIn, user } = useContext(AuthContext);
 
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
@@ -52,9 +52,9 @@ function SignIn() {
   };
 
   return (
-    <div className="sign-in-bg max-w-[700px] min-h-[490px] my-14 mx-auto px-5 py-3 rounded-lg ">
+    <div className="forget-bg max-w-[700px] min-h-[350px] my-14 mx-auto px-5 py-3 rounded-lg ">
       <h2 className="pb-4 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
-        Welcome Back!
+        Forget Password!
       </h2>
       <div>
       </div>
@@ -87,54 +87,16 @@ function SignIn() {
           </div>
         </div>
 
-        <div>
-          <label htmlFor="Name" className="text-gray-300">
-            Password
-          </label>
-          <div className="my-2 w-full relative rounded-2xl shadow-xl">
-            <input
-              ref={passwordRef}
-              onFocus={() => setRemovePasswordIcon(false)}
-              onChange={(e) => setPassword(e.target.value)}
-              onBlur={() => {
-                setRemovePasswordIcon(true);
-                clearPasswordInput();
-              }}
-              type="text"
-              className="bg-input w-full p-2 rounded-2xl"
-              placeholder="Password"
-            />
-            {removePasswordIcon === true ? (
-              <AiFillLock
-                className="absolute left-2 top-3 text-gray-400"
-                color="teal"
-              />
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
-        <div className="flex justify-end mt-5 color-green cursor-pointer hover:text-gray-300" onClick={() => {navigate('/Forget-password')}}>
-          Forgot Password ?
-        </div>
         <div className="text-center mt-6">
           <button
             type="submit"
-            className="border w-full p-2 bg-green text-gray-300 cursor-pointer hover:scale-90 ease-in-out duration-300"
+            className=" mt-8 border w-full p-2 bg-green text-gray-300 cursor-pointer hover:scale-90 ease-in-out duration-300"
           >
-            Sign In
+           Send reset Link
           </button>
         </div>
       </form>
-      <div className="flex justify-around mt-6 ">
-        <p className="text-gray-300">Dont have an account?</p>
-        <Link to='/sign-up'>
-        <div className="sign-instead hover:text-gray-300 color-green">
-          Sign Up
-        </div>
-        </Link>
-      </div>
     </div>
   );
 }
-export default SignIn;
+export default ForgetPassword

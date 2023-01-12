@@ -267,6 +267,7 @@ body{
 
 .sign-in-bg,
 .sign-up-bg,
+.forget-bg,
 .nav-slide-bg {
   background-color: #15273a;
 }
@@ -759,6 +760,13 @@ body{
         max-width: 340px;
         min-height: 590px;
       }
+
+      .forget-bg {
+        max-width: 340px;
+        min-height: 340px;
+      }
+
+
 
       .about-container {
         max-width: 340px;
