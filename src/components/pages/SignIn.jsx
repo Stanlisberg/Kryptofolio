@@ -52,7 +52,7 @@ function SignIn() {
   };
 
   return (
-    <div className="sign-bg max-w-[700px] min-h-[490px] my-14 mx-auto px-5 py-3 rounded-lg ">
+    <div className="sign-in-bg max-w-[700px] min-h-[490px] my-14 mx-auto px-5 py-3 rounded-lg ">
       <h2 className="pb-4 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
         Welcome Back!
       </h2>

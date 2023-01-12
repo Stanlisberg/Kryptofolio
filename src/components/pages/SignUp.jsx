@@ -53,7 +53,7 @@ function SignUp() {
   }
 
   return (
-    <div className=" sign-bg max-w-[700px] min-h-[550px] my-14 mx-auto px-5 py-3 rounded-lg">
+    <div className=" sign-up-bg max-w-[700px] min-h-[600px] my-14 mx-auto px-5 py-3 rounded-lg">
       <h2 className=" pb-6 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
         Create Account!
       </h2>
@@ -155,7 +155,7 @@ function SignUp() {
           </button>
         </div>
       </form>
-      <div className="flex justify-around mt-3">
+      <div className="flex justify-around mt-8">
         <p className="text-gray-300">Aready have an account?</p>
         <Link to='/sign-in'>
         <div className="sign-instead hover:text-gray-300 color-green">

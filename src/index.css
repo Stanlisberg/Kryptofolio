@@ -265,7 +265,8 @@ body{
   color:#1f2937;
 }
 
-.sign-bg,
+.sign-in-bg,
+.sign-up-bg,
 .nav-slide-bg {
   background-color: #15273a;
 }
@@ -749,9 +750,14 @@ body{
     }
 
     @media (max-width: 500px) {
-      .sign-bg {
+      .sign-in-bg {
         max-width: 340px;
-        min-height: 600px;
+        min-height: 500px;
+      }
+
+      .sign-up-bg {
+        max-width: 340px;
+        min-height: 590px;
       }
 
       .about-container {
