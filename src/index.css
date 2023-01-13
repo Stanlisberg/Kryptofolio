@@ -1,108 +1,102 @@
 @tailwind base;
-@tailwind components; 
+@tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-*{
+* {
   -webkit-box-sizing: border-box;
-  -webkit-padding:0;
-  -webkit-margin:0;
+  -webkit-padding: 0;
+  -webkit-margin: 0;
   box-sizing: border-box;
-  padding:0;
-  margin:0;
-  font-family: 'poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
 }
 
 input::placeholder {
   right: 5px;
   padding-left: 40px;
-  opacity: 0.4
+  opacity: 0.4;
 }
 
 /*--------------Animation-----------------*/
 @keyframes slideInFromLeft {
   0% {
-    transform:translateX(-100%)
+    transform: translateX(-100%);
   }
 
   100% {
-    transform:translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes slideInFromRight {
   0% {
-    transform:translateX(100%)
+    transform: translateX(100%);
   }
 
   100% {
-    transform:translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes slideInFromTop {
   0% {
-    transform:translateY(-100%)
+    transform: translateY(-100%);
   }
 
   100% {
-    transform:translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes slideInFromBottom {
   0% {
-    transform:translateY(100%)
+    transform: translateY(100%);
   }
 
   100% {
-    transform:translateX(0)
+    transform: translateX(0);
   }
 }
-/*----------custom classes-----------*/
-/* .div-container {
-  @apply rounded-2xl shadow-xl  px-2 max-w-[1140px] w-full mx-auto
-} */
 
 /* Utilities */
-.primary-color{
-  color: #ccd6f6
+.primary-color {
+  color: #ccd6f6;
 }
 .color-green {
   color: teal;
 }
 
 .table-heading-color {
-  color:#64ffda
-} 
+  color: #64ffda;
+}
 
 .price-color {
   color: yellowgreen;
 }
 
 .green {
-  color:green;
+  color: green;
 }
 
 .yellow {
   color: red;
 }
 
-.bg-gray{
- background: hsl(216, 79%, 7%);
+.bg-gray {
+  background: hsl(216, 79%, 7%);
 }
 
-.about-container-bg{
+.about-container-bg {
   background-color: #15273a;
 }
 
-.bg-input{
+.bg-input {
   background: #0b1e36;
   border: 1px solid dimgrey;
   padding-left: 5px;
-  /* color:dimgrey */
 }
 
 .go-back:hover {
@@ -110,9 +104,9 @@ input::placeholder {
 }
 
 .logo-header {
- border-radius: 10px;
- height: auto;
- overflow: hidden;
+  border-radius: 10px;
+  height: auto;
+  overflow: hidden;
 }
 
 .click {
@@ -123,8 +117,8 @@ input::placeholder {
   border-bottom: 1px solid teal;
 }
 
-body{
-  background:  #08192B;
+body {
+  background: #08192b;
   color: #8892b0;
 }
 
@@ -139,25 +133,27 @@ body{
   justify-content: space-between;
 }
 
-.nav-crypto{
-  margin-left:2px
+.nav-crypto {
+  margin-left: 2px;
 }
 
-.nav-folio{
+.nav-folio {
   color: #64ffda;
 }
 
 .nav-logo {
-  color:#ccd6f6;
-  margin-right:4px;
+  color: #ccd6f6;
+  margin-right: 4px;
 }
 
-.link, .link-market, .link-profile {
+.link,
+.link-market,
+.link-profile {
   padding: 0 10px;
   padding-left: 10px;
 }
 
-.link:hover{
+.link:hover {
   color: #64ffda;
   border-bottom: 1px solid #64ffda;
 }
@@ -169,11 +165,11 @@ body{
 .link-market {
   border-radius: 8px;
   height: 26px;
-  color:#64ffda;
+  color: #64ffda;
 }
 
-.link-market:hover{
-  color:#1f2937;
+.link-market:hover {
+  color: #1f2937;
   background: #64ffda;
 }
 
@@ -188,7 +184,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity:0.9;
+  opacity: 0.9;
   color: #64ffda;
 }
 
@@ -226,7 +222,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity:0.9;
+  opacity: 0.9;
   color: #ccd6f6;
 }
 
@@ -236,7 +232,7 @@ body{
 
 .profile:hover {
   background: teal;
-  color:#1f2937;
+  color: #1f2937;
 }
 
 .profile-sign:hover {
@@ -249,7 +245,7 @@ body{
 
 .sign-out:hover {
   background: teal;
-  color:#1f2937;
+  color: #1f2937;
 }
 
 .sign-in-bg,
@@ -259,16 +255,18 @@ body{
   background-color: #15273a;
 }
 
-.sign-in:hover, .sign-up:hover, .sign-instead:hover {
-  color:#1f2937;
+.sign-in:hover,
+.sign-up:hover,
+.sign-instead:hover {
+  color: #1f2937;
   transform: scale(0.93);
   background-color: #64ffda;
-  border:1px solid #64ffda;
+  border: 1px solid #64ffda;
 }
 
 .sign-instead:hover {
   background-color: teal;
-  border:1px solid teal;
+  border: 1px solid teal;
   padding: 0 5px;
   border-radius: 4px;
   cursor: pointer;
@@ -282,12 +280,12 @@ body{
 /*-------------overview----------------*/
 .overview-container {
   max-width: 1350px;
-  margin: 0 auto; 
+  margin: 0 auto;
   overflow: auto;
   padding: 0 50px;
 }
 
-.overview-trans{
+.overview-trans {
   animation: slideInFromLeft 1.5s ease-in;
   max-width: 700px;
 }
@@ -299,13 +297,13 @@ body{
   max-width: 800px;
 }
 
-.visit{
+.visit {
   cursor: pointer;
-  background:  #64ffda;
+  background: #64ffda;
   margin-top: 50px;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 14px;
-  color:#1f2937;
+  color: #1f2937;
   border-radius: 7px;
   width: 110px;
   text-align: center;
@@ -330,17 +328,17 @@ body{
   color: #64ffda;
 }
 .mkt-element {
-  font-size: "16px"
+  font-size: "16px";
 }
 
 /*----Line Break----------*/
-  .line-break{
-    border: 1px solid grey;
-    max-width: 1220px;
-    opacity: 0.3;
-    border-color: #8892b0;
-    margin-top: 100px;
-    }
+.line-break {
+  border: 1px solid grey;
+  max-width: 1220px;
+  opacity: 0.3;
+  border-color: #8892b0;
+  margin-top: 100px;
+}
 
 /*-------partners------ --*/
 .logo-container {
@@ -352,26 +350,26 @@ body{
 /*-------Loading----------*/
 .loading {
   font-size: 22px;
-  color:#64ffda;
+  color: #64ffda;
 }
 
 /*---------Info card---------*/
-  .info-head {
-    opacity: 0.8;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    background: #15273a;
-    width: 250px;
-    margin-left: 30px;
-  }
-  .info-card {
-    opacity: 0.8;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    background: #15273a;
-    max-width: 1200px;
-    margin-left: 30px;
- }
+.info-head {
+  opacity: 0.8;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  background: #15273a;
+  width: 250px;
+  margin-left: 30px;
+}
+.info-card {
+  opacity: 0.8;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  background: #15273a;
+  max-width: 1200px;
+  margin-left: 30px;
+}
 
 /*---BitCoin chart Item-------*/
 .cardo {
@@ -388,27 +386,25 @@ body{
 }
 
 .icon:hover {
-  stroke: teal
+  stroke: teal;
 }
 
 .overview-head {
-    max-width: 1350px;
-    margin: 0 auto; 
-    overflow: auto;
-    padding: 0 50px;
-    /* border: 1px solid purple; */
+  max-width: 1350px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 50px;
 }
 
-.van {
+/* .van {
   max-width: 100%;
   margin: 0 auto;
-  /* padding: ; */
 }
 
 .mas {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .bit-div {
   max-width: 1285px;
@@ -416,8 +412,8 @@ body{
 }
 
 /*----------- market----------- */
-.mkt-container{
- background-color: #15273a;
+.mkt-container {
+  background-color: #15273a;
 }
 
 .mkt-heading {
@@ -426,8 +422,8 @@ body{
   font-weight: bold;
 }
 
-.mkt-input{
-  background:  #15273a;
+.mkt-input {
+  background: #15273a;
   color: #fff;
   border: 1px solid grey;
 }
@@ -458,34 +454,34 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   gap: 10px;
   margin-top: 3px;
   flex-wrap: wrap;
 }
 
-.pagination .page-num{
+.pagination .page-num {
   padding: 0 6px;
   cursor: pointer;
   border-radius: 3px;
   font-weight: 400;
 }
 
-.pagination .page-num:hover{
-  background-Color: #64ffda;
+.pagination .page-num:hover {
+  background-color: #64ffda;
 }
 
 .pagination .page {
   padding: 0 8px;
 }
 
-.pagination .page:hover{
-  background-Color: #64ffda;
+.pagination .page:hover {
+  background-color: #64ffda;
   border-radius: 3px;
   color: #1f2937;
 }
 
-.pagination .active{
+.pagination .active {
   background-color: #64ffda;
   color: #1f2937;
 }
@@ -516,9 +512,9 @@ body{
 }
 
 .mkt-stats {
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
-  color:teal;
+  color: teal;
 }
 
 .mkt-coin-price {
@@ -555,15 +551,15 @@ body{
 }
 
 .footer-wrapper {
-  position:sticky;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-  left:0;
-  bottom:0;
+  position: sticky;
+  left: 0;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }
 
 .icon:hover {
-  stroke: teal
+  stroke: teal;
 }
 
 /*--------------media query----------------- */
@@ -572,68 +568,67 @@ body{
     padding: 0 15px;
   }
 }
-  
-    @media (min-width: 1024px) {
-      .line-break{
-        margin-left: auto;
-        margin-right: auto;
-      }
+
+@media (min-width: 1024px) {
+  .line-break {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .input-box {
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    margin-right: 8px;
+  }
+
+  .mkt-input {
+    width: 100%;
+  }
+
+  .mkt-input:focus {
+    width: 100%;
+  }
+
+  .input-container .input:focus {
+    margin: 0 auto;
+    width: 900px;
+    height: 50px;
+    margin-top: 15px;
+  }
+
+  .input-container .input-wrapper {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  @media (max-width: 500px) {
+    .sign-in-bg {
+      max-width: 340px;
+      min-height: 500px;
     }
 
-  @media (max-width: 767px) {
-    .input-box{
-      margin: 0 auto;
-      width: 100%;
-      height: 50px;
-      margin-top: 15px;
-      margin-right: 8px;
+    .sign-up-bg {
+      max-width: 340px;
+      min-height: 590px;
     }
 
-    .mkt-input{
-      width: 100%;
+    .forget-bg {
+      max-width: 340px;
+      min-height: 340px;
     }
 
-    .mkt-input:focus{
-      width: 100%;
+    .about-container {
+      max-width: 340px;
     }
+  }
 
-    .input-container .input:focus {
-      margin: 0 auto;
-      width: 900px;
-      height: 50px;
-      margin-top: 15px;
+  @media (max-width: 500px) {
+    .profile-detail {
+      max-width: 320px;
     }
-
-    .input-container .input-wrapper{
-      flex-direction:  column;
-      overflow: hidden;
-    }
-
-    @media (max-width: 500px) {
-      .sign-in-bg {
-        max-width: 340px;
-        min-height: 500px;
-      }
-
-      .sign-up-bg {
-        max-width: 340px;
-        min-height: 590px;
-      }
-
-      .forget-bg {
-        max-width: 340px;
-        min-height: 340px;
-      }
-
-      .about-container {
-        max-width: 340px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .profile-detail {
-        max-width: 320px;
-      }
-    }
-
+  }
 }
