@@ -1,6 +1,6 @@
 import { SparklinesLine, Sparklines } from "react-sparklines";
 import DOMpurify from "dompurify";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function CoinInfoItem({ coinInfoData }) {
   return (
@@ -14,39 +14,29 @@ function CoinInfoItem({ coinInfoData }) {
             alt="image"
           />
           <div className="ml-32 mt-5">
-            <p className="mr-4 font-bold">
-              {coinInfoData?.name}
-            </p>
+            <p className="mr-4 font-bold">{coinInfoData?.name}</p>
             <p className="mt-1">({coinInfoData?.symbol?.toUpperCase()}/USD)</p>
           </div>
-          <div
-            className="coin-url text-center mt-10 hover:scale-90 ease-in-out duration-300 cursor-pointer" 
-          >
+          <div className="coin-url text-center mt-10 hover:scale-90 ease-in-out duration-300 cursor-pointer">
             <a href={coinInfoData?.links?.homepage[0]}>
               www.{coinInfoData?.symbol}.org
             </a>
           </div>
         </div>
 
-         <Link to='/Market'>
-        <div
-          className="go-back py-3 cursor-pointer hover:scale-90 ease-in-out duration-300"
-        >
-          Go Back
-        </div>
-      </Link>
-     </div>
+        <Link to="/Market">
+          <div className="go-back py-3 cursor-pointer hover:scale-90 ease-in-out duration-300">
+            Go Back
+          </div>
+        </Link>
+      </div>
       <div className="grid lg:grid-cols-2 my-8">
         <div className="info-card py-2 mr-5 ml-10 lg:mr-1">
-          <div
-            className="ml-4 flex justify-between mt-5 w-auto border-b"
-          >
+          <div className="ml-4 flex justify-between mt-5 w-auto border-b">
             <div>
               <p>{coinInfoData?.symbol?.toUpperCase()}</p>
               {coinInfoData?.market_data?.current_price ? (
-                <p
-                  className="mkt-coin-price"
-                >
+                <p className="mkt-coin-price">
                   ${coinInfoData.market_data.current_price.usd.toLocaleString()}
                 </p>
               ) : (
@@ -63,7 +53,7 @@ function CoinInfoItem({ coinInfoData }) {
               <SparklinesLine color="chocolate" />
             </Sparklines>
           </div>
-          <div className= 'ml-4 flex justify-between pt-3'>
+          <div className="ml-4 flex justify-between pt-3">
             <div className="mt-4">
               <p>Market Cap</p>
               <div className="font-bold text-center">
@@ -71,7 +61,7 @@ function CoinInfoItem({ coinInfoData }) {
               </div>
             </div>
             <div className="mt-2 mr-4">
-              <p className=''>Volume</p>
+              <p className="">Volume</p>
               <div className="font-bold text-center">
                 ${coinInfoData?.market_data?.total_volume?.usd.toLocaleString()}
               </div>
@@ -94,17 +84,11 @@ function CoinInfoItem({ coinInfoData }) {
         </div>
         <div className="info-card py-2 pl-5 mt-4 lg:mt-0 text-start lg:mr-6 mr-5">
           <div className="my-10">
-            <p
-              className="mkt-stats table-row-color border-b "
-            >
-              Market Stats
-            </p>
+            <p className="mkt-stats table-row-color border-b ">Market Stats</p>
             <div className="flex justify-between py-4">
               <div>
                 <p>Market Rank</p>
-                <p className="font-bold">
-                  {coinInfoData?.market_cap_rank}
-                </p>
+                <p className="font-bold">{coinInfoData?.market_cap_rank}</p>
               </div>
               <div>
                 <p>Hashing Algorithm</p>
@@ -118,9 +102,7 @@ function CoinInfoItem({ coinInfoData }) {
               </div>
               <div>
                 <p>Liquidity Scores</p>
-                <p className="font-bold">
-                  {coinInfoData?.liquidity_score}
-                </p>
+                <p className="font-bold">{coinInfoData?.liquidity_score}</p>
               </div>
             </div>
           </div>
@@ -250,10 +232,9 @@ function CoinInfoItem({ coinInfoData }) {
           </div>
         </div>
       </div>
-      <div className="about-coin my-15 mb-28"
-      >
+      <div className="about-coin my-15 mb-28">
         <div className="font-medium text-2xl mt-5">
-          About <span className='about-coin-color'>{coinInfoData?.name}</span>
+          About <span className="about-coin-color">{coinInfoData?.name}</span>
         </div>
         <p
           className="text-justify mt-5"

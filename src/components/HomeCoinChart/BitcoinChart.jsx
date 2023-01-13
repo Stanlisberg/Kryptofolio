@@ -11,7 +11,7 @@ function BitcoinChart() {
  
   return (
     <>
-     <div className='me grid lg:grid-cols-3 mx-auto gap-4 px-4'>
+     <div className='bit-div grid lg:grid-cols-3 mx-auto gap-4 px-4'>
       {coinData &&
         coinData.length > 0 &&
         coinData.map((coin, index) => (

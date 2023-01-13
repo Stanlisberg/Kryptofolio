@@ -10,7 +10,7 @@ function Trending() {
   }, []);
 
   return (
-    <div className="trend-container div-container my-10 mb-28 py-4  mx-auto rounded-lg ">
+    <div className="trend-container my-10 mb-28 py-4  mx-auto rounded-lg ">
       <h1 className=" py-4 pl-4"
            style={{
               fontSize: "30px", 
