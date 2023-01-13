@@ -11,6 +11,8 @@ import Profile from "./components/pages/Profile";
 import ForgetPassword from "./components/pages/ForgetPassword";
 import { KryptofolioProvider } from "./components/Context/KryptofolioContext";
 import { AuthProvider } from "./components/Context/AuthContext";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Footer from "./components/layouts/Footer";
 import Icons from "./components/layouts/icons";
 
@@ -50,6 +52,7 @@ function App() {
            </AuthProvider>
           </Router>
       </KryptofolioProvider>
+      <ToastContainer />
     </>
   );
 }

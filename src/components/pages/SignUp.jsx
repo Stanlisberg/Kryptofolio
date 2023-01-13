@@ -3,6 +3,7 @@ import { FaUserTie } from "react-icons/fa";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from 'react-toastify'
 
 function SignUp() {
   const [name, setName] = useState();
@@ -46,9 +47,14 @@ function SignUp() {
   };
 
   const submitForm= (e) => {
+    try{
       signUp(email, password);
+      toast.success('Account created!')
       navigate('/')
-
+    } catch(e) {
+      console.log(e.error);
+      toast.error('something went wrong')
+    }
     e.preventDefault();
   }
 

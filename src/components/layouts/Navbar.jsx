@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext} from "react";
 import { FaCoins, FaTimes, FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import AuthContext from "../Context/AuthContext";
 
 function Navbar() {
   const [navIcon, setNavIcon] = useState(true);
+  const { user } = useContext(AuthContext)
 
   return (
     <>
@@ -32,15 +34,6 @@ function Navbar() {
               >
                 Coin-Market
               </Link>
-              {/* <Link
-                to="/Profile"
-                className="primary-color link-profile pb-2 pl-5 "
-              >
-                Profile
-              </Link>
-              <div className="flex justify-end absolute top-8 right-8">
-                <FaUser size="14" color="#64ffda" />
-              </div> */}
             </div>
           </div>
           <div className="pt-1 md:hidden ml-3 block cursor-pointer z-10">
@@ -94,13 +87,16 @@ function Navbar() {
             >
               <Link to="/Market">Coin-Market</Link>
             </li>
-
-            <li
+            { user?.email? (
+              <li
               className=" py-6 cursor-pointer"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Profile">Profile</Link>
             </li>
+            ) : (
+              ''
+            ) }
           </ul>
         </div>
       </div>

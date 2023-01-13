@@ -8,21 +8,27 @@ import { auth } from "../../firebase";
 
 function ForgetPassword() {
   const { signIn, user } = useContext(AuthContext);
-
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
   const [ email, setEmail ] = useState()
 
   const emailRef = useRef();
   const navigate = useNavigate()
 
-  const handleSubmit = async (e) => {
-    //   navigate('/')
-      await sendPasswordResetEmail(auth, user?.email)
-      toast.success('Email was sent')
-     .catch((e) => {
-      console.log(e.message);
-      alert(e.message);
-     })
+  const handleSubmit = (e) => {
+    try {
+        if (emailRef.current.value == '') {
+            toast.error('Enter email')
+        } else {
+            sendPasswordResetEmail(auth, email)
+            .then()
+            navigate('/')
+            toast.success('Email sent')
+
+        }
+    } catch(e) {
+        console.log(e)
+        toast.error('something went wrong!')
+    }
 
     e.preventDefault();
   }

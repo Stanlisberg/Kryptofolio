@@ -2,6 +2,7 @@ import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from 'react-toastify'
 
 function SignIn() {
   const { signIn, user } = useContext(AuthContext);
@@ -17,20 +18,14 @@ function SignIn() {
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    // try{
-    //   signIn(email, password);
-    //   navigate('/Profile')
-    // }catch(e) {
-    //   console.log(e.message)
-    //   alert(e.message)
-    // }
-      signIn(email, password);
-
-      navigate('/Profile')
-     .catch((e) => {
-      console.log(e.message);
-      alert(e.message);
-     })
+    try{
+        signIn(email, password);
+        toast.success('signed in successful')
+        navigate('/Profile')
+    } catch(e) {
+        console.log(e.message);
+        toast.error('wrong details')
+     }
 
     e.preventDefault();
   }
