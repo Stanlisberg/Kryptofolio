@@ -91,7 +91,7 @@ function Market() {
                 </th>
               </tr>
             </thead>
-            <tbody className='hey'>
+            <tbody className="">
               {currentItems &&
                 currentItems.length > 0 &&
                 currentItems

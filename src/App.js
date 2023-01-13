@@ -8,13 +8,14 @@ import CoinInfo from "./components/CoinDesc/CoinInfo";
 import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
 import Profile from "./components/pages/Profile";
+import Footer from "./components/layouts/Footer";
 import ForgetPassword from "./components/pages/ForgetPassword";
 import { KryptofolioProvider } from "./components/Context/KryptofolioContext";
 import { AuthProvider } from "./components/Context/AuthContext";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Footer from "./components/layouts/Footer";
-import Icons from "./components/layouts/icons";
+// import Footer from "./components/layouts/Footer";
+// import Icons from "./components/layouts/icons";
 
 function App() {
   return (
@@ -41,13 +42,14 @@ function App() {
               </Routes>
             {/* </Router> */}
 
-            <div className="footer-div  flex flex-col items-center">
+            {/* <div className="footer-div  flex flex-col items-center">
               <Icons />
               <Footer />
               <div className="gecko footer md:mt-3 md:contents hidden border font-mono">
                 Powered by Coingecko.
               </div>
-            </div>
+            </div> */}
+            <Footer />
           </div>
            </AuthProvider>
           </Router>

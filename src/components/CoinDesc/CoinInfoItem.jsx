@@ -14,7 +14,7 @@ function CoinInfoItem({ coinInfoData }) {
             alt="image"
           />
           <div className="ml-32 mt-5">
-            <p className="table-row-color mr-4 font-bold">
+            <p className="mr-4 font-bold">
               {coinInfoData?.name}
             </p>
             <p className="mt-1">({coinInfoData?.symbol?.toUpperCase()}/USD)</p>
@@ -30,7 +30,7 @@ function CoinInfoItem({ coinInfoData }) {
 
          <Link to='/Market'>
         <div
-          className="go-back py-3 table-row-color cursor-pointer hover:scale-90 ease-in-out duration-300"
+          className="go-back py-3 cursor-pointer hover:scale-90 ease-in-out duration-300"
         >
           Go Back
         </div>
@@ -39,7 +39,7 @@ function CoinInfoItem({ coinInfoData }) {
       <div className="grid lg:grid-cols-2 my-8">
         <div className="info-card py-2 mr-5 ml-10 lg:mr-1">
           <div
-            className="table-row-color ml-4 flex justify-between mt-5 w-auto border-b"
+            className="ml-4 flex justify-between mt-5 w-auto border-b"
           >
             <div>
               <p>{coinInfoData?.symbol?.toUpperCase()}</p>
@@ -54,7 +54,7 @@ function CoinInfoItem({ coinInfoData }) {
               )}
             </div>
             <div className="mt-1">
-              <p className="table-row-color mr-4 font-bold">Last 7 days</p>
+              <p className="mr-4 font-bold">Last 7 days</p>
               <p className="mt-1 font-bold">Chart</p>
             </div>
           </div>
@@ -65,14 +65,14 @@ function CoinInfoItem({ coinInfoData }) {
           </div>
           <div className= 'ml-4 flex justify-between pt-3'>
             <div className="mt-4">
-              <p className=''>Market Cap</p>
-              <div className="table-row-color font-bold text-center">
+              <p>Market Cap</p>
+              <div className="font-bold text-center">
                 ${coinInfoData?.market_data?.market_cap?.usd?.toLocaleString()}
               </div>
             </div>
             <div className="mt-2 mr-4">
               <p className=''>Volume</p>
-              <div className="table-row-color font-bold text-center">
+              <div className="font-bold text-center">
                 ${coinInfoData?.market_data?.total_volume?.usd.toLocaleString()}
               </div>
             </div>
@@ -80,13 +80,13 @@ function CoinInfoItem({ coinInfoData }) {
           <div className="ml-4 flex justify-between pt-5">
             <div className="">
               <p>24h high</p>
-              <div className="table-row-color font-bold">
+              <div className="font-bold">
                 ${coinInfoData?.market_data?.high_24h?.usd.toLocaleString()}
               </div>
             </div>
             <div className="mr-4">
-              <p>24h low</p>
-              <div className="table-row-color font-bold">
+              <p className="">24h low</p>
+              <div className=" font-bold">
                 ${coinInfoData?.market_data?.low_24h?.usd.toLocaleString()}
               </div>
             </div>
@@ -99,17 +99,16 @@ function CoinInfoItem({ coinInfoData }) {
             >
               Market Stats
             </p>
-            {/* <div className="grid grid-cols-3 mt-10"> */}
             <div className="flex justify-between py-4">
               <div>
                 <p>Market Rank</p>
-                <p className="table-row-color font-bold">
+                <p className="font-bold">
                   {coinInfoData?.market_cap_rank}
                 </p>
               </div>
               <div>
                 <p>Hashing Algorithm</p>
-                <p className="table-row-color font-bold">
+                <p className="font-bold">
                   {coinInfoData?.hashing_algorithm ? (
                     <p>{coinInfoData?.hashing_algorithm}</p>
                   ) : (
@@ -119,7 +118,7 @@ function CoinInfoItem({ coinInfoData }) {
               </div>
               <div>
                 <p>Liquidity Scores</p>
-                <p className="table-row-color font-bold">
+                <p className="font-bold">
                   {coinInfoData?.liquidity_score}
                 </p>
               </div>
@@ -128,7 +127,7 @@ function CoinInfoItem({ coinInfoData }) {
           <div className="grid grid-cols-3 my-5 py-5">
             <div>
               <p>Price Change (24h)</p>
-              <p className="table-row-color font-bold">
+              <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_24h > 0 ? (
                   <p className="text-green-600">
                     {coinInfoData?.market_data?.price_change_percentage_24h?.toFixed(
@@ -148,7 +147,7 @@ function CoinInfoItem({ coinInfoData }) {
             </div>
             <div>
               <p>Price Change (7d)</p>
-              <p className="table-row-color font-bold">
+              <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_7d > 0 ? (
                   <p className="text-green-600">
                     {coinInfoData?.market_data?.price_change_percentage_7d?.toFixed(
@@ -168,7 +167,7 @@ function CoinInfoItem({ coinInfoData }) {
             </div>
             <div>
               <p>Price Change (14d)</p>
-              <p className="table-row-color font-bold">
+              <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_14d > 0 ? (
                   <p className="text-green-600">
                     {coinInfoData?.market_data?.price_change_percentage_14d?.toFixed(
@@ -190,7 +189,7 @@ function CoinInfoItem({ coinInfoData }) {
           <div className="grid grid-cols-3 my-5 py-5">
             <div>
               <p>Price Change (30d)</p>
-              <p className="table-row-color font-bold">
+              <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_30d > 0 ? (
                   <p className="text-green-600">
                     {coinInfoData?.market_data?.price_change_percentage_30d?.toFixed(
@@ -210,7 +209,7 @@ function CoinInfoItem({ coinInfoData }) {
             </div>
             <div>
               <p>Price Change (60d)</p>
-              <p className="table-row-color font-bold">
+              <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_60d > 0 ? (
                   <p className="text-green-600">
                     {coinInfoData?.market_data?.price_change_percentage_60d?.toFixed(
@@ -230,7 +229,7 @@ function CoinInfoItem({ coinInfoData }) {
             </div>
             <div>
               <p>Price Change (1yr)</p>
-              <p className="table-row-color font-bold">
+              <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_1y > 0 ? (
                   <p className="text-green-600">
                     {coinInfoData?.market_data?.price_change_percentage_1y?.toFixed(
@@ -253,7 +252,7 @@ function CoinInfoItem({ coinInfoData }) {
       </div>
       <div className="about-coin my-15 mb-28"
       >
-        <div className="table-row-color font-medium text-2xl mt-5">
+        <div className="font-medium text-2xl mt-5">
           About <span className='about-coin-color'>{coinInfoData?.name}</span>
         </div>
         <p
