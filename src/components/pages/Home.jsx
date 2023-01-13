@@ -23,65 +23,6 @@ function Home() {
   return (
     <>
       <section className="input-container">
-        {/* <div className="input-wrapper mt-100 ">
-          <h1 className='input-head'></h1>
-          <div className="input-box">
-            <table className="table-container">
-              <thead>
-                <tr>
-                  <td className="table-data">
-                    <i className="search-icon fa-solid fa-magnifying-glass "></i>
-                  </td>
-                  <td>
-                    <input
-                      ref={grabSearch}
-                      onChange={() => fetchSearch(grabSearch.current.value)}
-                      type="text"
-                      placeholder="Search Coins"
-                      className="input-search"
-                    />
-                  </td>  
-                </tr>
-              </thead>
-            </table>
-          </div>
-        </div> */}
-        {/* {searchData &&
-          searchData.length > 0 &&
-          searchData.map((value) => {
-            if (grabSearch.length < 1) {
-              return "";
-            } else if (
-              value.id
-                .toLowerCase()
-                .includes(grabSearch.current.value.toLowerCase())
-            ) {
-              return (
-                <div className="font-xs absolute top-28 right-4 z-10 bg-gray-700 h-auto max-h-60 w-2/3 overflow-y-scroll p-2 rounded-lg sm:w-1/2 lg:w-1/3 lg:right-10">
-                  <div className="flex flex-row-reverse justify-between items-center my-2 border border-transparent border-b-gray-100 border-opacity-50 py-2">
-                    <p>{value?.name}</p>
-                    <img src={value?.thumb} alt={value?.id} />
-                  </div>
-                </div>
-              );
-            }
-          })} */}
-        {/* <div className="name pt-3 grid items-center justify-center h-screen ease-in duration-300">
-          <div className=" contents md:hidden ">
-            <Link to="/" className="primary-color link pl-5 ">
-              Home
-            </Link>
-            <Link to="/About" className="primary-color link pl-5 ">
-              About
-            </Link>
-            <Link to="/Contact" className="primary-color link pl-5 ">
-              Contact
-            </Link>
-            <Link to="/Market" className="primary-color link-market pb-2 pl-5 ">
-              Coin-Market
-            </Link>
-          </div>
-          </div> */}
         {user?.email ? (
           <div className="flex justify-end mr-4 mt-3">
             <Link to="/Profile">

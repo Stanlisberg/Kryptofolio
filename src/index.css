@@ -94,8 +94,7 @@ input::placeholder {
  background: hsl(216, 79%, 7%);
 }
 
-.about-container{
-  /* background: #0b1e36 */
+.about-container-bg{
   background-color: #15273a;
 }
 
@@ -178,7 +177,7 @@ body{
   background: #64ffda;
 }
 
-/* ............Sign-in and Sign-up..............*/
+/* ............Sign-in, Sign-up and Profile..............*/
 .sign-in {
   padding: 3px 5px;
   border: 1px solid grey;
@@ -374,7 +373,7 @@ body{
     margin-left: 30px;
  }
 
-/*-------Utilities-------*/
+/*---BitCoin chart Item-------*/
 .cardo {
   opacity: 0.6;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
@@ -411,10 +410,9 @@ body{
   justify-content: space-between;
 }
 
-.me {
+.bit-div {
   max-width: 1285px;
   animation: slideInFromBottom 1.5s ease-in;
-  /* border: 1px solid teal; */
 }
 
 /*----------- market----------- */
@@ -562,6 +560,10 @@ body{
   bottom:0;
   width: 100%;
   text-align: center;
+}
+
+.icon:hover {
+  stroke: teal
 }
 
 /*--------------media query----------------- */
