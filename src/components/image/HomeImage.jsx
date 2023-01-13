@@ -23,15 +23,22 @@ function HomeImage() {
   //   setInterval(animateImage, 1700);
   // }, []);
   
-  // return (
-  //   <div>
-  //     <img
-  //       ref={imageRef}
-  //       className="hey h-64 w-full mx-auto lg:absolute lg:inset-0 lg:h-full lg:w-full"
-  //       alt="crypto"
-  //       width="100%"
-  //     />
-  //   </div>
-  // );
+  return (
+    // <div>
+    //   <img
+    //     ref={imageRef}
+    //     className="hey h-64 w-full mx-auto lg:absolute lg:inset-0 lg:h-full lg:w-full"
+    //     alt="crypto"
+    //     width="100%"
+    //   />
+    // </div>
+    <div>
+      <div className='Image-container'>
+        <img className='a' src='images/bitcoin.svg' width='400'/>
+        {/* <img className='b' src='images/flower.svg' />
+        <img className='c' src='images/connected.svg' /> */}
+      </div>
+    </div>
+  );
 }
 export default HomeImage;

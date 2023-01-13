@@ -63,7 +63,8 @@ function Home() {
             </Link>
           </div>
         )}
-        <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden">
+        {/* <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden"> */}
+        <div className='flex overview-container'>
           <div className="overview-trans text-center mx-auto w-full lg:text-start overflow-hidden">
             <h1 className="overview-heading mx-auto overflow-x-hidden mt-10 lg:mt-0">
               Overview
@@ -78,7 +79,7 @@ function Home() {
             </div>
           </div>
           <div className="lg:relative mt-10 lg:mt-0">
-            {/* <HomeImage /> */}
+            <HomeImage />
             {/* <React.Suspense fallback="Loading...">
               <LazyAbout />
             </React.Suspense> */}
