@@ -8,13 +8,11 @@ function Footer() {
         </div>
         <div className="font-mono">
           Built with <span className="text-red-600">&#x2764;</span> by{" "}
+          <a href='http://www.twitter.com' target='_blank'>
           <span className="footer-color px-1 cursor-pointer hover:scale-90 ease-in-out duration-300">
             StanLisberg
           </span>
-          <a
-            className="text-gray-800"
-            href="https://tailwind-elements.com/"
-          ></a>
+          </a>
         </div>
         <div className="md:mt-3 md:contents hidden font-mono">
           Powered by Coingecko.
