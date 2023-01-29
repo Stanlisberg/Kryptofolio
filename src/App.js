@@ -23,7 +23,6 @@ function App() {
           <AuthProvider>
             <div className="app">
               {/* with the Router component, we are enabling the react routing mechanism */}
-              <Router>
                 <Navbar />
                 <Routes>
                   <Route path="/" element={<Home />} />
@@ -38,7 +37,6 @@ function App() {
                     <Route path=":coinId" />
                   </Route>
                 </Routes>
-              </Router>
               <Footer />
             </div>
           </AuthProvider>
