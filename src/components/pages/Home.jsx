@@ -64,17 +64,17 @@ function Home() {
           </div>
         )}
         {/* <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden"> */}
-        <div className='flex overview-container'>
-          <div className="overview-trans text-center mx-auto w-full lg:text-start overflow-hidden">
+        <div className='flex mx-auto max-w-[1170px] mt-8 flex-col lg:flex-row lg:justify-between items-center px-8 lg:px-0'>
+          <div className="overview-trans text-center w-full lg:text-start overflow-hidden">
             <h1 className="overview-heading mx-auto overflow-x-hidden mt-10 lg:mt-0">
               Overview
             </h1>
-            <p className="mt-3 text-center md:text-justify">
-              A swift crypocurrency platform that to provides users a seemingly
+            <p className="mt-3 text-justify md:text-justify">
+              A swift crypocurrency platform that provides users a seemingly
               smooth user experience when it comes to seeking for information
               about any type of digital currency in the crypto ecosystem.
             </p>
-            <div className="visit mx-auto lg:mx-0">
+            <div className="visit mx-auto lg:mx-0 flex-">
               <Link to="/Market">Visit Market</Link>
             </div>
           </div>
@@ -86,7 +86,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className="top-container text-start pl-5 xl:px-12 lg:pt-10 lg:py-50">
+      <div className="top-container text-start pl-5 xl:px-12 lg:pt-10">
         <div className="top-element">Top coins.</div>
         <div className="mkt-element">Market Cap sparkline chart.</div>
       </div>

@@ -14,6 +14,12 @@
   font-family: "poppins", sans-serif;
 }
 
+body {
+  background: #08192b;
+  color: #8892b0;
+}
+
+
 input::placeholder {
   right: 5px;
   padding-left: 40px;
@@ -137,11 +143,6 @@ input::placeholder {
 
 .click:hover {
   border-bottom: 1px solid teal;
-}
-
-body {
-  background: #08192b;
-  color: #8892b0;
 }
 
 /*---------Linking----------------- */
@@ -309,7 +310,7 @@ body {
 
 .overview-trans {
   animation: slideInFromLeft 1.5s ease-in;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .overview-heading {
@@ -322,7 +323,7 @@ body {
 .visit {
   cursor: pointer;
   background: #64ffda;
-  margin-top: 50px;
+  margin-top: 40px;
   font-weight: bold;
   font-size: 14px;
   color: #1f2937;
@@ -342,7 +343,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   animation: slideInFromTop 1.5s ease-in;
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .top-element {
