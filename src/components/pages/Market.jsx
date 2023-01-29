@@ -28,7 +28,7 @@ function Market() {
   useEffect(() => {
     fetchAllCoins();
     console.log(allCoins);
-  }, []);
+  }, fetchAllCoins);
 
   return (
     <>
