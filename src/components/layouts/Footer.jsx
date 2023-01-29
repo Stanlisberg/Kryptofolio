@@ -1,4 +1,5 @@
 import Icons from "./icons";
+
 function Footer() {
   return (
     <footer>
@@ -8,7 +9,7 @@ function Footer() {
         </div>
         <div className="font-mono">
           Built with <span className="text-red-600">&#x2764;</span> by{" "}
-          <a href='http://www.twitter.com' target='_blank'>
+          <a href='http://www.twitter.com' target='_blank' rel="noreferrer">
           <span className="footer-color px-1 cursor-pointer hover:scale-90 ease-in-out duration-300">
             StanLisberg
           </span>
