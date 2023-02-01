@@ -3,7 +3,7 @@ import Icons from "./icons";
 function Footer() {
   return (
     <footer>
-      <div className="footer-wrapper font-mono text-center flex flex-col md:flex-row md:justify-around pb-2 pt-8 items-center">
+      <div className="footer-wrapper font-mono text-center flex flex-col md:flex-row md:justify-around pb-2 pt-8 items-center text-sm">
         <div>
           <Icons />
         </div>

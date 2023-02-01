@@ -66,7 +66,7 @@ function Market() {
                 <th
                   className="text-start"
                   style={{
-                    color: "teal",
+                    // color: "teal",
                   }}
                 >
                   Coins
@@ -86,8 +86,7 @@ function Market() {
                   Mkt Cap
                 </th>
                 <th>
-                  <span className="hidden md:contents">Price graph</span> (7
-                  Days)
+                  <span className="hidden md:contents">Price graph</span> SparkLine
                 </th>
               </tr>
             </thead>
