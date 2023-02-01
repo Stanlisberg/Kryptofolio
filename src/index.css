@@ -437,6 +437,7 @@ input::placeholder {
 /*----------- market----------- */
 .mkt-container {
   background-color: #15273a;
+
 }
 
 .mkt-heading {
@@ -463,10 +464,6 @@ input::placeholder {
 .trend-container {
   max-width: 1200px;
   background-color: #15273a;
-}
-
-.tr-container {
-  height: 80px;
 }
 
 /* -------------Pagination---------------- */

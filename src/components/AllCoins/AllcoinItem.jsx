@@ -32,12 +32,12 @@ function MarketItem({ coin }) {
 
   return (
     <>
-      <tr className="tr-container h-[800px] border-b overflow-scroll px-1 mx-1">
-        <td className="cursor-pointer" onClick={saveCoin}>
+      <tr className="h-[80px] border-b px-1 mx-1">
+        <td className="cursor-pointer p-3" onClick={saveCoin}>
           {savedCoin ? <AiFillStar color="yellowgreen" /> : <AiOutlineStar />}
         </td>
-        <td>{coin.market_cap_rank}</td>
-        <td className="">
+        <td className='p-3'>{coin.market_cap_rank}</td>
+        <td className="p-3">
           <Link to={`/coin/${coin.id}`}>
             <div className=" md:flex md:items-center hover:scale-90 ease-in-out duration-300 cursor-pointer">
               <img
@@ -50,8 +50,8 @@ function MarketItem({ coin }) {
           </Link>
         </td>
         <td className="hidden md:table-cell">{coin.symbol.toUpperCase()}</td>
-        <td>${coin.current_price.toLocaleString()}</td>
-        <td>
+        <td className='p-3'>${coin.current_price.toLocaleString()}</td>
+        <td className='p-3'>
           {coin.price_change_percentage_24h > 0 ? (
             <p className="text-green-600">
               {coin.price_change_percentage_24h.toFixed(2)}%
@@ -62,10 +62,10 @@ function MarketItem({ coin }) {
             </p>
           )}
         </td>
-        <td className="hidden md:table-cell">
+        <td className="hidden md:table-cell p-3">
           ${coin.total_volume.toLocaleString()}
         </td>
-        <td className="">${coin.market_cap.toLocaleString()}</td>
+        <td className="p-3">${coin.market_cap.toLocaleString()}</td>
         <td>
           <Sparklines data={coin.sparkline_in_7d.price}>
             <SparklinesLine color="green" />
