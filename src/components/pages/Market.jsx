@@ -51,9 +51,9 @@ function Market() {
           <h1 className="font-bold mb-3">All Categories</h1>
         </div>
         <div className="overflow-x-auto mx-2">
-          <table className=" text-center border-collapse w-full">
-            <thead>
-              <tr className="primary-color border-b">
+          <table className=" border-collapse w-full text-center">
+            <thead className=" text-center">
+              <tr className="primary-color border-b ">
                 <th
                   className=""
                   style={{
@@ -72,7 +72,7 @@ function Market() {
                   Coins
                 </th>
                 <th className="hidden md:table-cell">Symbol</th>
-                <th>Price</th>
+                <th className=''>Price</th>
                 <th>
                   24h<span className="hidden md:contents"> Price change</span>
                 </th>
