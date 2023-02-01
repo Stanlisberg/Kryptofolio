@@ -35,18 +35,18 @@ export const KryptofolioProvider = ({ children }) => {
   // .....Api to fetch all coins in market......
   const fetchAllCoins = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_KRYPTOFOLIO_URL}/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1000&page=1&sparkline=true`
+      `${process.env.REACT_APP_KRYPTOFOLIO_URL}/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=300&page=1&sparkline=true`
     );
     const data = await response.json();
     console.log(data);
     
-    setTimeout(() => {
+    // setTimeout(() => {
       setLoading(false);
       dispatch({
         type: "FETCH_COINS",
         payload: data,
       });
-    }, 2000)
+    // }, 2000)
   };
 
   //.....Api to Fetch Trending Coins 

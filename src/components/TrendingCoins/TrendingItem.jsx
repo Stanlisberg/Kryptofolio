@@ -2,7 +2,6 @@ function TrendingItem( {coin} ) {
 
   return (
     <div
-      key={coin.id}
       className="rounded-2xl bg-gray flex justify-between p-4 hover:scale-95 ease-in duration-200"
     >
       <div className="flex justify-between w-full items-center">

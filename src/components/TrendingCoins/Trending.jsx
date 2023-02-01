@@ -23,7 +23,7 @@ function Trending() {
         {trending &&
           trending.length > 0 &&
           trending.map((coin => 
-          <TrendingItem coin={coin} />
+          <TrendingItem coin={coin} key={coin.id} />
           ))}
       </div>
     </div>
