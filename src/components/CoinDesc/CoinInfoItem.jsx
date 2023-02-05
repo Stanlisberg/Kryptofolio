@@ -210,7 +210,7 @@ function CoinInfoItem({ coinInfoData }) {
               </p>
             </div>
             <div>
-              <p>Price Change (1yr)</p>
+              <p>Price<span className='hidden md:contents'>Change</span> (1yr)</p>
               <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_1y > 0 ? (
                   <p className="text-green-600">
