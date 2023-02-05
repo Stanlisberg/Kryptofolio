@@ -6,10 +6,9 @@ import BitcoinChart from "../HomeCoinChart/BitcoinChart";
 import KryptofolioContext from "../Context/KryptofolioContext";
 import AuthContext from "../Context/AuthContext";
 import HomeImage from "../image/HomeImage";
-// const LazyAbout = React.lazy(() => import("../image/HomeImage"));
 
 function Home() {
-  const { searchData, fetchSearch, loading } = useContext(KryptofolioContext);
+  const { loading } = useContext(KryptofolioContext);
   const [signIn, setSignIn] = useState(true);
   const [signUp, setSignUp] = useState(true);
   const [over, setOver] = useState(false);
@@ -80,9 +79,6 @@ function Home() {
           </div>
           <div className="lg:relative mt-10 lg:mt-0">
             <HomeImage />
-            {/* <React.Suspense fallback="Loading...">
-              <LazyAbout />
-            </React.Suspense> */}
           </div>
         </div>
       </section>

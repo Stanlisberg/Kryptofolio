@@ -6,7 +6,7 @@ import ReactPaginate from "react-paginate";
 import { Audio, ThreeDots, BallTriangle } from "react-loader-spinner";
 
 function Market() {
-  const { fetchAllCoins, allCoins, loading } = useContext(KryptofolioContext);
+  const { fetchAllCoins, allCoins, loading, marketCoins } = useContext(KryptofolioContext);
 
   const [searchCoins, setSearchCoins] = useState("");
   const [currentItems, setCurrentItems] = useState([]);
@@ -16,18 +16,18 @@ function Market() {
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(allCoins?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(allCoins?.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, allCoins]);
+    setCurrentItems(marketCoins?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(marketCoins?.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, marketCoins]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % allCoins?.length;
+    const newOffset = (event.selected * itemsPerPage) % marketCoins?.length;
     setItemOffset(newOffset);
   };
 
   useEffect(() => {
     fetchAllCoins();
-    console.log(allCoins);
+    console.log(marketCoins);
   }, []);
 
   return (
