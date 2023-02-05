@@ -65,7 +65,7 @@ function Home() {
         {/* <div className="overview-container grid lg:grid-cols-2 lg:gap-x-16 lg:mt-10 overflow-hidden"> */}
         <div className='flex mx-auto max-w-[1170px] mt-20 flex-col lg:flex-row lg:justify-between items-center px-8 lg:px-0'>
           <div className="overview-trans text-center w-full lg:text-start overflow-hidden">
-            <h1 className="overview-heading mx-auto overflow-x-hidden mt-10 lg:mt-0">
+            <h1 className="overview-heading mx-auto overflow-x-hidden mt-8 lg:mt-0">
               Overview
             </h1>
             <p className="mt-3 text-justify md:text-justify">
@@ -77,12 +77,12 @@ function Home() {
               <Link to="/Market">Visit Market</Link>
             </div>
           </div>
-          <div className="lg:relative mt-10 lg:mt-0">
+          <div className="lg:relative mt-20 lg:mt-0">
             <HomeImage />
           </div>
         </div>
       </section>
-      <div className="top-container text-start pl-5 xl:px-12 lg:pt-10">
+      <div className="top-container text-start pl-6 xl:px-12 lg:pt-10">
         <div className="top-element">Top coins.</div>
         <div className="mkt-element">Market Cap sparkline chart.</div>
       </div>

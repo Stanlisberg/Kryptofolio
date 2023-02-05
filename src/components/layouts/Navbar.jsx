@@ -55,8 +55,11 @@ function Navbar() {
         <div
           className={
             navIcon === false
-              ? "md:hidden block fixed top-17 items-center justify-between w-full h-full nav-slide-bg ease-in duration-300 z-10"
-              : "fixed items-center -left-96 justify-between h-full nav-slide-bg ease-in duration-300 z-10"
+              ? "md:hidden fixed top-17 items-center justify-between w-full h-full nav-slide-bg ease-in duration-300 z-10"
+              : "fixed items-center -left-96 justify-between h-full nav-slide-bg ease-in duration-500 z-10"
+
+            //  ? "overflow-y-hidden md:hidden flex flex-col ease-in duration-300 absolute top-0 left-0 w-full h-screen border text-gray-300 px-4 py-7 bg-black/90"
+            //  : "absolute top-0 h-screen left-[-100%] ease-in duration-500"
           }
         >
           <ul className="w-full p-4">
