@@ -108,7 +108,7 @@ function CoinInfoItem({ coinInfoData }) {
           </div>
           <div className="grid grid-cols-3 my-5 py-5">
             <div>
-              <p>Price Change (24h)</p>
+              <p>Price <span className='hidden md:contents'>Change</span> (24h)</p>
               <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_24h > 0 ? (
                   <p className="text-green-600">
@@ -128,7 +128,7 @@ function CoinInfoItem({ coinInfoData }) {
               </p>
             </div>
             <div>
-              <p>Price Change (7d)</p>
+              <p>Price <span className='hidden md:contents'>Change</span> (7d)</p>
               <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_7d > 0 ? (
                   <p className="text-green-600">
@@ -148,7 +148,7 @@ function CoinInfoItem({ coinInfoData }) {
               </p>
             </div>
             <div>
-              <p>Price Change (14d)</p>
+              <p>Price <span className='hidden md:contents'>Change</span> (14d)</p>
               <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_14d > 0 ? (
                   <p className="text-green-600">
@@ -170,7 +170,7 @@ function CoinInfoItem({ coinInfoData }) {
           </div>
           <div className="grid grid-cols-3 my-5 py-5">
             <div>
-              <p>Price Change (30d)</p>
+              <p>Price <span className='hidden md:contents'>Change</span> (30d)</p>
               <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_30d > 0 ? (
                   <p className="text-green-600">
@@ -190,7 +190,7 @@ function CoinInfoItem({ coinInfoData }) {
               </p>
             </div>
             <div>
-              <p>Price Change (60d)</p>
+              <p>Price <span className='hidden md:contents'>Change</span> (60d)</p>
               <p className="font-bold">
                 {coinInfoData?.market_data?.price_change_percentage_60d > 0 ? (
                   <p className="text-green-600">

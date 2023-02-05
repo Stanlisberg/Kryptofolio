@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+import { toast } from "react-toastify";
 
 function MarketItem({ coin }) {
   const { user } = useContext(AuthContext);
@@ -26,7 +27,8 @@ function MarketItem({ coin }) {
         }),
       });
     } else {
-      alert("please sign in to save a coin to your watch list!");
+      // alert("please sign in to save a coin to your watch list!");
+      toast.error('Please sign in to save a coin to your watch list!')
     }
   };
 

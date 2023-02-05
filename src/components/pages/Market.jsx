@@ -12,7 +12,7 @@ function Market() {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 20;
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -27,7 +27,7 @@ function Market() {
 
   useEffect(() => {
     fetchAllCoins();
-    
+
     console.log(marketCoins);
   }, []);
 
