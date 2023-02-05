@@ -6,7 +6,7 @@ import ReactPaginate from "react-paginate";
 import { Audio, ThreeDots, BallTriangle } from "react-loader-spinner";
 
 function Market() {
-  const { fetchAllCoins, allCoins, loading, marketCoins } = useContext(KryptofolioContext);
+  const { fetchAllCoins, loading, marketCoins } = useContext(KryptofolioContext);
 
   const [searchCoins, setSearchCoins] = useState("");
   const [currentItems, setCurrentItems] = useState([]);
@@ -27,6 +27,7 @@ function Market() {
 
   useEffect(() => {
     fetchAllCoins();
+    
     console.log(marketCoins);
   }, []);
 

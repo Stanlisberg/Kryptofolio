@@ -3,7 +3,7 @@ import KryptofolioContext from "../Context/KryptofolioContext";
 import BitcoinChartItem from "./BitcoinChartItem";
 
 function BitcoinChart() {
-  const { coinData, getCoins } = useContext(KryptofolioContext);
+  const { homeCoins, getCoins } = useContext(KryptofolioContext);
 
   useEffect(() => {
     getCoins();
@@ -12,9 +12,9 @@ function BitcoinChart() {
   return (
     <>
      <div className='bit-div grid lg:grid-cols-3 mx-auto gap-4 px-4'>
-      {coinData &&
-        coinData.length > 0 &&
-        coinData.map((coin, index) => (
+      {homeCoins &&
+        homeCoins.length > 0 &&
+        homeCoins.map((coin, index) => (
           <BitcoinChartItem coin={coin} key={index}/>
         ))}
       </div>

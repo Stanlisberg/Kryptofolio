@@ -7,7 +7,8 @@ export const KryptofolioProvider = ({ children }) => {
   const [trending, setTrending] = useState();
   const [searchData, setSearchData] = useState({});
   const [coinInfoData, setCoinInfoData] = useState();
-  const [ marketCoins, setMarketCoins] = useState();
+  const [marketCoins, setMarketCoins] = useState();
+  const [homeCoins, setHomeCoins] = useState()
   const [loading, setLoading] = useState(true);
 
   // initialising reducer
@@ -26,11 +27,12 @@ export const KryptofolioProvider = ({ children }) => {
     const data = await response.json();
     console.log(data);
     setLoading(false);
+    setHomeCoins(data);
 
-    dispatch({
-      type: "GET_COINS",
-      payload: data,
-    });
+    // dispatch({
+    //   type: "GET_COINS",
+    //   payload: data,
+    // });
   };
 
   // .....Api to fetch all coins in market......
@@ -42,11 +44,12 @@ export const KryptofolioProvider = ({ children }) => {
     console.log(data);
     
       setLoading(false);
+      setMarketCoins(data);
+
       // dispatch({
       //   type: "FETCH_COINS",
       //   payload: data,
       // });
-      setMarketCoins(data);
   };
 
   //.....Api to Fetch Trending Coins 
@@ -95,6 +98,7 @@ export const KryptofolioProvider = ({ children }) => {
         coinInfoData,
         loading,
         marketCoins,
+        homeCoins,
         //..Functions..//
         fetchAllCoins,
         getCoins,
