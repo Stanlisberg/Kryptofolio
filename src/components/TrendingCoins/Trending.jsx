@@ -11,7 +11,7 @@ function Trending() {
 
   return (
     <div className="trend-container my-10 mb-10 py-4  mx-auto rounded-lg ">
-      <h1 className=" py-4 pl-4"
+      <h1 className=" py-4 pl-4 ml-1"
            style={{
               fontSize: "30px", 
               color: "#64ffda" 

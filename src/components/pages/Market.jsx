@@ -33,12 +33,12 @@ function Market() {
 
   return (
     <>
-      <div className="mkt-container rounded-md my-8 mx-auto py-0 px-3 max-w-[1200px]">
+      <div className="mkt-container rounded-md my-4 md:my-6 mx-auto py-0 px-3 max-w-[1200px]">
         <div className=" text-center pt-5 text-2xl rounded-lg text-zinc-50">
           {/* Cryptocurrency Prices By Market Cap. */}
         </div>
-        <div className="flex flex-col-reverse md:flex-row justify-between mt-8 text-start md:mt-4 md:pt-4 md:pb-6  md:text-right">
-          <h1 className="mkt-heading text-3xl font-bold my-2 py-2">Market</h1>
+        <div className="flex flex-col-reverse md:flex-row justify-between mt-3 text-start md:mt-2 md:pt-4 md:pb-6  md:text-right">
+          <h1 className="mkt-heading text-3xl font-bold my-2 py-2 ml-2">Market</h1>
           <div>
             <input
               className="mkt-input my-2 shadow-xl rounded-xl px-4 py-2 w-full"
@@ -49,7 +49,7 @@ function Market() {
           </div>
         </div>
         <div>
-          <h1 className="font-bold mb-3">All Categories</h1>
+          <h1 className="font-bold mb-3 ml-2">All Categories</h1>
         </div>
         <div className="overflow-x-auto mx-2">
           <table className=" border-collapse w-full text-center">
