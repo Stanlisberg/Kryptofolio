@@ -85,7 +85,7 @@ function CoinInfoItem({ coinInfoData }) {
         <div className="info-card py-2 pl-5 mt-4 lg:mt-0 text-start lg:mr-6 mr-5">
           <div className="my-10">
             <p className="mkt-stats table-row-color border-b ">Market Stats</p>
-            <div className="grid grid-cols-3 my-3 py-3">
+            <div className="grid grid-cols-3 my-4 md:my-[52px] py-3">
               <div>
                 <p><span className='hidden md:contents'>Market </span> Rank</p>
                 <p className="font-bold">{coinInfoData?.market_cap_rank}</p>
