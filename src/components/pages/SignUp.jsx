@@ -4,6 +4,8 @@ import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from 'react-toastify'
+import { doc, setDoc, collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
 function SignUp() {
   const [name, setName] = useState();
@@ -46,15 +48,20 @@ function SignUp() {
     }
   };
 
-  const submitForm= (e) => {
+  const  submitForm = async(e) => {
     try{
-      signUp(email, password);
+      await signUp(email, password);
       toast.success('Account created!')
       navigate('/')
+
+      await setDoc(doc(db, "users", 'yolo'), { 
+        watchList: [],
+      })
     } catch(e) {
-      console.log(e.error);
+      console.log(e.message);
       toast.error('something went wrong')
     }
+
     e.preventDefault();
   }
 

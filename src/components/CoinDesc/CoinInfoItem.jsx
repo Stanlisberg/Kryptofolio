@@ -60,7 +60,7 @@ function CoinInfoItem({ coinInfoData }) {
                 ${coinInfoData?.market_data?.market_cap?.usd?.toLocaleString()}
               </div>
             </div>
-            <div className="mt-2 mr-4">
+            <div className="mt-4 mr-4">
               <p className="">Volume</p>
               <div className="font-bold text-center">
                 ${coinInfoData?.market_data?.total_volume?.usd.toLocaleString()}
@@ -74,7 +74,7 @@ function CoinInfoItem({ coinInfoData }) {
                 ${coinInfoData?.market_data?.high_24h?.usd.toLocaleString()}
               </div>
             </div>
-            <div className="mr-4">
+            <div className="mr-[48px]">
               <p className="">24h low</p>
               <div className=" font-bold">
                 ${coinInfoData?.market_data?.low_24h?.usd.toLocaleString()}
@@ -85,13 +85,13 @@ function CoinInfoItem({ coinInfoData }) {
         <div className="info-card py-2 pl-5 mt-4 lg:mt-0 text-start lg:mr-6 mr-5">
           <div className="my-10">
             <p className="mkt-stats table-row-color border-b ">Market Stats</p>
-            <div className="flex justify-between py-4">
+            <div className="grid grid-cols-3 my-3 py-3">
               <div>
-                <p>Market Rank</p>
+                <p><span className='hidden md:contents'>Market </span> Rank</p>
                 <p className="font-bold">{coinInfoData?.market_cap_rank}</p>
               </div>
               <div>
-                <p>Hashing Algorithm</p>
+                <p>Hashing <span className='hidden md:contents'>Algorithm</span></p>
                 <p className="font-bold">
                   {coinInfoData?.hashing_algorithm ? (
                     <p>{coinInfoData?.hashing_algorithm}</p>
@@ -100,8 +100,8 @@ function CoinInfoItem({ coinInfoData }) {
                   )}
                 </p>
               </div>
-              <div>
-                <p>Liquidity Scores</p>
+              <div className="mr-16">
+                <p>Liquidity <span className='hidden md:contents'>Scores</span></p>
                 <p className="font-bold">{coinInfoData?.liquidity_score}</p>
               </div>
             </div>

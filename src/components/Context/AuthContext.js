@@ -6,7 +6,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
@@ -17,17 +17,21 @@ export const AuthProvider = ({ children }) => {
   // Sign Up
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
-    .then(response => {
-      console.log(response.user)
-      alert('Account created!')
-      navigate('/')
-    })
-    .catch((e) => {
-      alert(e.message)
-    })
-    return setDoc(doc(db, "users", email), { 
-      watchList: [],
-    });
+    // .then(response => {
+    //   console.log(response.user)
+      // alert('Account created!')
+      // navigate('/')
+    // })
+    // .catch((e) => {
+    //   alert(e.message)
+    // })
+    // setDoc(doc(db, "users", email), { 
+    //   watchList: [],
+    // })
+    // .then(() => {
+    //   console.log('logged')
+    // })
+  
   };
 
   // Sign In
