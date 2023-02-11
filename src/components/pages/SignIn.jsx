@@ -48,11 +48,9 @@ function SignIn() {
 
   return (
     <div className="sign-in-bg max-w-[700px] min-h-[490px] my-14 mx-auto px-5 py-3 rounded-lg ">
-      <h2 className="pb-4 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
+      <h2 className="pb-4 mt-4 font-bold text-3xl overflow-hidden text-gray-300">
         Welcome Back!
       </h2>
-      <div>
-      </div>
       <form className="mt-5" onSubmit={ handleSubmit }>
         <div className='mb-6'> 
           <label htmlFor="Name" className="text-gray-300">

@@ -1,13 +1,14 @@
 import { useState, useEffect, createContext } from "react";
-import { auth, db } from "../../firebase";
+import { auth } from "../../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { doc, setDoc, collection, addDoc } from "firebase/firestore";
+// import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify'
 
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
@@ -17,20 +18,15 @@ export const AuthProvider = ({ children }) => {
   // Sign Up
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
-    // .then(response => {
-    //   console.log(response.user)
-      // alert('Account created!')
-      // navigate('/')
-    // })
-    // .catch((e) => {
-    //   alert(e.message)
-    // })
-    // setDoc(doc(db, "users", email), { 
-    //   watchList: [],
-    // })
-    // .then(() => {
-    //   console.log('logged')
-    // })
+    .then(response => {
+      console.log(response.user)
+    })
+    .catch((e) => {
+      alert(e.message)
+    })
+    toast.success('Account created!')
+    alert('Account created!')
+    navigate('/')
   
   };
 

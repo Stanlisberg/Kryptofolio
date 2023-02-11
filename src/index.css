@@ -627,12 +627,12 @@ input::placeholder {
   @media (max-width: 500px) {
     .sign-in-bg {
       max-width: 340px;
-      min-height: 500px;
+      min-height: 495px;
     }
 
     .sign-up-bg {
       max-width: 340px;
-      min-height: 590px;
+      min-height: 495px;
     }
 
     .forget-bg {
