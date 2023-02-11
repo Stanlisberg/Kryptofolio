@@ -55,44 +55,43 @@ function Navbar() {
         <div
           className={
             navIcon === false
-              ? "md:hidden fixed top-17 items-center justify-between w-full h-full nav-slide-bg ease-in duration-300 z-10"
-              : "fixed items-center -left-96 justify-between h-full nav-slide-bg ease-in duration-500 z-10"
-
-            //  ? "overflow-y-hidden md:hidden flex flex-col ease-in duration-300 absolute top-0 left-0 w-full h-screen border text-gray-300 px-4 py-7 bg-black/90"
-            //  : "absolute top-0 h-screen left-[-100%] ease-in duration-500"
+            ? " fixed overflow-y-hidden md:hidden flex flex-col ease-in duration-700 top-[66px] left-0 w-full h-full px-4 py-7 nav-slide-bg z-10 opacity-[0.9]"
+            : "  fixed top-17 h-full left-[-100%] ease-in duration-700"
+              // ? "md:hidden fixed top-17 items-center justify-between w-full h-full nav-slide-bg ease-in duration-300 z-10"
+              // : "fixed items-center -left-96 justify-between h-full nav-slide-bg ease-in duration-500 z-10"
           }
         >
           <ul className="w-full p-4">
             <li
-              className="border-b py-6 cursor-pointer"
+              className="border-b py-6 cursor-pointer mobile-color"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/">Home</Link>
             </li>
 
             <li
-              className="border-b py-6 cursor-pointer"
+              className="border-b py-6 cursor-pointer mobile-color"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/About">About</Link>
             </li>
 
             <li
-              className="border-b py-6 cursor-pointer"
+              className="border-b py-6 cursor-pointer mobile-color"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Contact">Contact</Link>
             </li>
 
             <li
-              className="border-b py-6 cursor-pointer"
+              className="border-b py-6 cursor-pointer mobile-color"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Market">Coin-Market</Link>
             </li>
             { user?.email? (
               <li
-              className=" py-6 cursor-pointer"
+              className=" py-6 cursor-pointer mobile-color"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Profile">Profile</Link>

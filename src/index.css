@@ -67,28 +67,6 @@ input::placeholder {
   }
 }
 
-.image-container {
-  height:10em;
-  position:relative;
-}
-
-.image-container > * {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation:12s autoplay1 infinite;
-}
-
-@keyframes autoplay1 {
-  0% {visibility: visible}
-  33.33% {visibility: hidden}
-}
-
- .a {animation-delay: 0s}
- .b {animation-delay: 4s}
- .c {animation-delay: 8s}
-
 /* Utilities */
 .primary-color {
   color: #ccd6f6;
@@ -111,6 +89,9 @@ input::placeholder {
 
 .yellow {
   color: red;
+}
+.mobile-color {
+  color: #ccd6f6;
 }
 
 .bg-gray {
@@ -412,23 +393,6 @@ input::placeholder {
   stroke: teal;
 }
 
-.overview-head {
-  max-width: 1350px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 50px;
-}
-
-/* .van {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.mas {
-  display: flex;
-  justify-content: space-between;
-} */
-
 .bit-div {
   animation: slideInFromBottom 1.5s ease-in;
 }
@@ -436,7 +400,6 @@ input::placeholder {
 /*----------- market----------- */
 .mkt-container {
   background-color: #15273a;
-
 }
 
 .mkt-heading {
