@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="nav-container mb-5 shadow-lg bg-neutral z-10">
+      <div className="nav-container mb-5 shadow-2xl z-10 ">
         <div className="nav-wrapper py-4 md:px-10 px-7 ">
           <div className="nav-logo font-bold text-2xl cursor-pointer md:ml-2 flex items-center overflow-hidden">
             <FaCoins size="21" color="#64ffda" />
