@@ -23,7 +23,7 @@ function Home() {
     <>
       <div className="sign-container">
         {user?.email ? (
-          <div className="flex justify-end mr-4 mt-3">
+          <div className="flex justify-end mr-10 mt-3">
             <Link to="/Profile">
               <button
                 className="profile"
