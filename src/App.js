@@ -25,6 +25,7 @@ function App() {
               {/* with the Router component, we are enabling the react routing mechanism */}
                 <Navbar />
                 <Routes>
+                 <Route path="/About" element={<About />} />
                   <Route path="/" element={<Home />} />
                   <Route path="/About" element={<About />} />
                   <Route path="/Market" element={<Market />} />

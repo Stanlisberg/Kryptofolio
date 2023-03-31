@@ -50,7 +50,7 @@ function Market() {
         </div>
         <div>
           <h1 className="font-bold mb-3 ml-2">All Categories</h1>
-        </div>
+        </div> 
         <div className="overflow-x-auto mx-2">
           <table className=" border-collapse w-full text-center">
             <thead className=" text-center">

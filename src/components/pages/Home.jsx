@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <>
-      <section className="input-container">
+      <div className="sign-container">
         {user?.email ? (
           <div className="flex justify-end mr-4 mt-3">
             <Link to="/Profile">
@@ -49,7 +49,7 @@ function Home() {
             </button>
           </div>
         ) : (
-          <div className="flex justify-end mr-4 mt-3">
+          <div className="flex justify-end mr-10 mt-3">
             <Link to="sign-in">
               <button className={signIn ? "sign-up" : "sign-in"}>
                 Sign In
@@ -81,7 +81,7 @@ function Home() {
             <HomeImage />
           </div>
         </div>
-      </section>
+      </div>
       <div className="top-container text-start pl-6 xl:px-12 lg:pt-10">
         <div className="top-element">Top coins.</div>
         <div className="mkt-element">Market Cap sparkline chart.</div>

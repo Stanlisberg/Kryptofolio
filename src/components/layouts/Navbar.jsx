@@ -7,15 +7,15 @@ import AuthContext from "../Context/AuthContext";
 function Navbar() {
   const [navIcon, setNavIcon] = useState(true);
   const { user } = useContext(AuthContext)
-
+  
   return (
     <>
-      <div className="nav-container mb-5 shadow-2xl z-10 ">
-        <div className="nav-wrapper py-4 md:px-10 px-7 ">
-          <div className="nav-logo font-bold text-2xl cursor-pointer md:ml-2 flex items-center overflow-hidden">
+      <div className="max-w-full shadow-2xl relative">
+        <div className="flex justify-between py-4 md:px-10 px-7 shadow-2xl fixed top-0 w-full z-10 bg-[#08192b]"> 
+          <div className="font-bold text-2xl cursor-pointer mr-[4px] md:ml-2 text-[#ccd6f6] flex items-center overflow-hidden">
             <FaCoins size="21" color="#64ffda" />
-            <span className="nav-crypto">Krypto</span>
-            <span className="nav-folio">Folio</span>
+            <span className="ml-[2px]">Krypto</span>
+            <span className="text-[#64ffda]">Folio</span>
           </div>
           <div className="pt-3">
             <div className="hidden md:contents relative">
@@ -55,7 +55,7 @@ function Navbar() {
         <div
           className={
             navIcon === false
-            ? " fixed overflow-y-hidden md:hidden flex flex-col ease-in duration-700 top-[66px] left-0 w-full h-full px-4 py-7 nav-slide-bg z-10 opacity-[0.9]"
+            ? " fixed overflow-y-hidden md:hidden flex flex-col ease-in duration-700 top-[64px] left-0 w-full h-full px-4 py-7 nav-slide-bg z-10 opacity-[0.9]"
             : "  fixed top-17 h-full left-[-100%] ease-in duration-700"
               // ? "md:hidden fixed top-17 items-center justify-between w-full h-full nav-slide-bg ease-in duration-300 z-10"
               // : "fixed items-center -left-96 justify-between h-full nav-slide-bg ease-in duration-500 z-10"

@@ -127,28 +127,6 @@ input::placeholder {
 }
 
 /*---------Linking----------------- */
-.nav-container {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-crypto {
-  margin-left: 2px;
-}
-
-.nav-folio {
-  color: #64ffda;
-}
-
-.nav-logo {
-  color: #ccd6f6;
-  margin-right: 4px;
-}
 
 .link,
 .link-market,
@@ -178,6 +156,9 @@ input::placeholder {
 }
 
 /* ............Sign-in, Sign-up and Profile..............*/
+.sign-container {
+  margin-top: 90px;
+}
 .sign-in {
   padding: 3px 5px;
   border: 1px solid grey;
