@@ -33,10 +33,7 @@ function Market() {
 
   return (
     <>
-      <div className="mkt-container rounded-md my-4 md:my-6 mx-auto py-0 px-3 max-w-[1200px]">
-        <div className=" text-center pt-5 text-2xl rounded-lg text-zinc-50">
-          {/* Cryptocurrency Prices By Market Cap. */}
-        </div>
+      <div className="rounded-md mx-auto mt-32 py-0 px-3 max-w-[1200px] bg-[#15273a]">
         <div className="flex flex-col-reverse md:flex-row justify-between mt-3 text-start md:mt-2 md:pt-4 md:pb-6  md:text-right">
           <h1 className="mkt-heading text-3xl font-bold my-2 py-2 ml-2">Market</h1>
           <div>

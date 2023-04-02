@@ -10,7 +10,7 @@ function Icons() {
     <div className=" mx-auto">
       <ul className="flex">
         <li className="p-2">
-          <a href='#' title='Github'><GithubIcon className='icon hover:scale-90 ease-in-out duration-300 cursor-pointer'/></a>
+          <a href='#' title='Github'><GithubIcon className='hover:scale-90 ease-in-out duration-300 cursor-pointer'/></a>
         </li>
         <li className="p-2">
           <a href='#' title='Instagram'><InstagramIcon className="icon hover:scale-90 ease-in-out duration-300 cursor-pointer"/></a>
