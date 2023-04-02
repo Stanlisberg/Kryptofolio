@@ -6,35 +6,35 @@ function Contact() {
   return (
     <>
       <div className=' mt-24 text-center text-2xl font-mono'>Contact Us...</div>
-      <div className="mt-8 py-28 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] ">
-      <div className="flex mx-10 justify-between">
-          <div className="w-[45%] items-center">
-            <div className="mx-4 text-justify font-mono text-2xl text-white-500 text-blue-300">
+      <div className="mt-8 py-20 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] mb-8">
+       <div className="flex mx-10 flex-col justify-center items-center lg:flex-row lg:justify-between">
+          <div className="w-full lg:w-[40%] items-center px-2 lg:px-0">
+            <div className=" lg:mx-0 text-justify font-mono text-4xl text-white-500 text-blue-300">
               {" "}
-              Lets talk.
+              Let's talk.
             </div>
-            <p className=" mx-4 my-6 text-justify font-md p-6 border-2 border-dashed border-blue-300 flex items-center">
+            <p className="  my-6 text-justify font-md p-6 border-2 border-dashed border-blue-300 flex items-center w-full">
               Ask us anything or just say hi. We are very much available to respond to your enquires.
               
             </p>
-            <div className='mt-16'>
-              <div className='mx-4 flex'>
+            <div className='mt-14'>
+              <div className='flex'>
                  <ImPhone style={{marginTop: '2px'}}/>
                 <p className='ml-2  mb-2'>+234 814 748 7463</p>
               </div>
-              <div className='mx-4 flex'>
+              <div className='flex'>
                 <FaEnvelope style={{marginTop: '3px'}}/>
                 <p className='ml-2'>stanlisberg@gmail.com</p>
               </div>
             </div>
           </div>
-          <form className="mr-4">
-            <div className='flex justify-between p-2'>
+          <form className=" w-full mt-20 lg:w-[40%] lg:mt-0">
+            <div className='flex flex-col lg:flex-row lg:justify-between p-2'>
               <div className='flex flex-col'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Name</label>
                 <input type='text' placeholder="John Doe" className='bg-[#15273a] border-b-2 outline-none contact-input  mt-2 border-dashed border-blue-300' ></input>
               </div>
-              <div className='flex flex-col ml-8'>
+              <div className='flex flex-col mt-12 lg:mt-0 lg:ml-8'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Email</label>
                 <input type='text' placeholder="doe@example.com" className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
               </div>

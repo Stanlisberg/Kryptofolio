@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function CoinInfoItem({ coinInfoData }) {
   return (
     <>
-      <div className="flex flex-col-reverse lg:justify-between">
+      <div className="flex flex-col-reverse lg:justify-between mt-24">
         <div className="info-head my-5 h-40 relative mt-10">
           <img
             className="ml-1 p-2 mt-2 absolute top-0"
@@ -232,7 +232,7 @@ function CoinInfoItem({ coinInfoData }) {
           </div>
         </div>
       </div>
-      <div className="about-coin my-15 mb-28">
+      <div className="about-coin my-15 mb-16">
         <div className="font-medium text-2xl mt-5">
           About <span className="about-coin-color">{coinInfoData?.name}</span>
         </div>

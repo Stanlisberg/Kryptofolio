@@ -98,12 +98,6 @@ input::placeholder {
   background: hsl(216, 79%, 7%);
 }
 
-.bg-input {
-  background: #0b1e36;
-  border: 1px solid dimgrey;
-  padding-left: 5px;
-}
-
 .go-back:hover {
   color: #64ffda;
 }
@@ -258,6 +252,13 @@ input::placeholder {
   border-radius: 6px;
 }
 
+.bg-input {
+  /* background: #0b1e36; */
+  background: #15273a;
+  border: 1px solid dimgrey;
+  padding-left: 5px;
+}
+
 /*-------------overview----------------*/
 .overview-container {
   max-width: 1350px;
@@ -392,12 +393,13 @@ input::placeholder {
 }
 
 .mkt-input:hover {
-  border: 2px solid #ccd6f6;
+  border: 1px solid #ccd6f6;
 }
 
 .mkt-input:focus {
-  border: 2px solid #64ffda;
+  border: 1px solid #64ffda;
   width: 320px;
+  outline: none;
 }
 
 .trend-container {
