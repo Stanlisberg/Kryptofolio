@@ -56,8 +56,8 @@ function About() {
           <div className="bg-[#ccd6f6] rounded-lg rounded-r-none my-1 h-15 border-2">
             <input
               type="text"
-              placeholder="johndoe@example.com"
-              className="bg-[#ccd6f6] px-4 my-3 lg:my-2 mb-4 outline-0 about-input placeholder:-pt-20"
+              placeholder="doe@example.com"
+              className="bg-[#ccd6f6] px-4 my-3 lg:my-2 mb-4 outline-0 about-input placeholder:-pt-20 w-[200px]"
             />
           </div>
           <button className="bg-[teal] text-gray-300 px-2  my-1 cursor-pointer rounded-r-md flex items-center hover:scale-90 ease-in-out duration-300">
