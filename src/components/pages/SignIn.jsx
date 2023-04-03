@@ -66,7 +66,7 @@ function SignIn() {
                 clearEmailInput();
               }}
               type="text"
-              className="bg-input w-full p-2 rounded-2xl"
+              className="bg-input w-full p-2 rounded-xl"
               placeholder="Email"
             />
             {removeEmailIcon === true ? (
@@ -94,7 +94,7 @@ function SignIn() {
                 clearPasswordInput();
               }}
               type="text"
-              className="bg-input w-full p-2 rounded-2xl"
+              className="bg-input w-full p-2 rounded-xl"
               placeholder="Password"
             />
             {removePasswordIcon === true ? (

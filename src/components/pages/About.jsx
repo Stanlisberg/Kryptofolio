@@ -1,7 +1,17 @@
 import WorldImage from '../image/WorldImage'
 import WorkImage from "../image/WorkImage";
+import { useRef } from "react";
+import { toast } from 'react-toastify'
 
 function About() {
+
+  const inputRef = useRef()
+  const submitForm = (e) => {
+    toast.success('subscribed successful')
+    inputRef.current.value = ''
+
+    e.preventDefault()
+  }
   return (
     <>
      <div className=' mt-24 text-center text-2xl font-mono'>About Kryptofolio...</div>
@@ -52,18 +62,24 @@ function About() {
         <div className="flex items-center">
           <p className='text-md font-mono'>Sign up for our news Letter.</p>
         </div>
+        <form onSubmit={submitForm}>
         <div className="flex rounded-lg">
           <div className="bg-[#ccd6f6] rounded-lg rounded-r-none my-1 h-15 border-2">
             <input
-              type="text"
+              ref={inputRef}
+              type="email"
+              required='required'
               placeholder="doe@example.com"
               className="bg-[#ccd6f6] px-4 my-3 lg:my-2 mb-4 outline-0 about-input placeholder:-pt-20 w-[200px]"
             />
           </div>
-          <button className="bg-[teal] text-gray-300 px-2  my-1 cursor-pointer rounded-r-md flex items-center hover:scale-90 ease-in-out duration-300">
+          <button 
+            className="bg-[teal] text-gray-300 px-2  my-1 cursor-pointer rounded-r-md flex items-center hover:scale-90 ease-in-out duration-300"
+            type='submit'>
             Subscribe
           </button>
         </div>
+        </form>
       </div>
     </>
   );

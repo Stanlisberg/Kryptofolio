@@ -42,7 +42,7 @@ function ForgetPassword() {
   };
 
   return (
-    <div className="forget-bg max-w-[700px] min-h-[350px] my-14 mx-auto px-5 py-3 rounded-lg ">
+    <div className="forget-bg max-w-[700px] min-h-[400px] my-24 mt-40 mx-auto px-5 py-16 rounded-lg ">
       <h2 className="pb-4 mt-1 font-bold text-3xl overflow-hidden text-gray-300">
         Forget Password!
       </h2>
@@ -63,7 +63,7 @@ function ForgetPassword() {
                 clearEmailInput();
               }}
               type="text"
-              className="bg-input w-full p-2 rounded-2xl"
+              className="bg-input w-full p-2 rounded-xl"
               placeholder="Email"
             />
             {removeEmailIcon === true ? (

@@ -259,6 +259,16 @@ input::placeholder {
   background: #15273a;
   border: 1px solid dimgrey;
   padding-left: 5px;
+  color: #fff;
+}
+
+.bg-input:hover {
+  border: 1px solid #ccd6f6;
+}
+
+.bg-input:focus {
+  border: 1px solid #64ffda;
+  outline: none;
 }
 
 /*-------------overview----------------*/

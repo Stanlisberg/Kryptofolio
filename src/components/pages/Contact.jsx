@@ -1,8 +1,22 @@
+import { useRef } from "react";
+import { toast } from 'react-toastify'
 import { ImPhone } from 'react-icons/im'
 import { FaEnvelope } from 'react-icons/fa'
 import { IoIosRocket} from 'react-icons/io'
 
 function Contact() {
+
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+  const submitForm = (e) => {
+    toast.success('Success')
+    nameRef.current.value = ''
+    emailRef.current.value = ''
+    messageRef.current.value = ''
+
+    e.preventDefault()
+  }
   return (
     <>
       <div className=' mt-24 text-center text-2xl font-mono'>Contact Us...</div>
@@ -28,22 +42,41 @@ function Contact() {
               </div>
             </div>
           </div>
-          <form className=" w-full mt-20 lg:w-[40%] lg:mt-0">
+          <form 
+            className="w-full mt-20 lg:w-[40%] lg:mt-0"
+            onSubmit={submitForm}>
             <div className='flex flex-col lg:flex-row lg:justify-between p-2'>
               <div className='flex flex-col lg:w-[45%]'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Name</label>
-                <input type='text' placeholder="John Doe" className='bg-[#15273a] border-b-2 outline-none contact-input  mt-2 border-dashed border-blue-300' ></input>
+                <input 
+                 type='text' 
+                 required
+                 placeholder="John Doe" 
+                 ref={nameRef}
+                 className='bg-[#15273a] border-b-2 outline-none contact-input  mt-2 border-dashed border-blue-300' ></input>
               </div>
               <div className='flex flex-col mt-12 lg:mt-0 lg:w-[45%]'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Email</label>
-                <input type='text' placeholder="doe@example.com" className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
+                <input 
+                type='email' 
+                required
+                placeholder="doe@example.com" 
+                ref={emailRef}
+                className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
               </div>
             </div>
             <div className='flex flex-col mt-10  mx-2'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Message</label>
-                <input type='text' placeholder="Hi There..." className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
+                <input 
+                 type='text' 
+                 required
+                 placeholder="Hi There..." 
+                 ref={messageRef}
+                 className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
             </div>
-            <button className="bg-[teal] text-gray-300 py-2 px-3 mt-14 ml-2 cursor-pointer rounded-md flex items-center hover:scale-90 ease-in-out duration-300">
+            <button 
+              className="bg-[teal] text-gray-300 py-2 px-3 mt-14 ml-2 cursor-pointer rounded-md flex items-center hover:scale-90 ease-in-out duration-300"
+              type='submit'>
               Send <IoIosRocket style={{marginLeft: '4px'}}/>
             </button>
           </form>
