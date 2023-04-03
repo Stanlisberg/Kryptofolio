@@ -109,7 +109,7 @@ function Market() {
         </div>
       </div>
       {loading ? (
-        <div className="loading text-center font-bold font- text-green-300">
+        <div className="loading text-center font-bold font- mt-4 text-green-300">
           Loading...
         </div>
       ) : (

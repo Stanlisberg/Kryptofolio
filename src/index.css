@@ -68,6 +68,8 @@ input::placeholder {
 }
 
 /* Utilities */
+/* bg-[#040f207d] */
+
 .primary-color {
   color: #ccd6f6;
 }
@@ -417,7 +419,7 @@ input::placeholder {
   font-size: 1rem;
   font-family: "Courier New", Courier, monospace;
   gap: 10px;
-  margin-top: 3px;
+  margin-top: 32px;
   flex-wrap: wrap;
 }
 

@@ -6,7 +6,7 @@ function Contact() {
   return (
     <>
       <div className=' mt-24 text-center text-2xl font-mono'>Contact Us...</div>
-      <div className="mt-8 py-20 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] mb-8">
+      <div className="mt-8 py-32 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] mb-8">
        <div className="flex mx-10 flex-col justify-center items-center lg:flex-row lg:justify-between">
           <div className="w-full lg:w-[40%] items-center px-2 lg:px-0">
             <div className=" lg:mx-0 text-justify font-mono text-4xl text-white-500 text-blue-300">
@@ -30,11 +30,11 @@ function Contact() {
           </div>
           <form className=" w-full mt-20 lg:w-[40%] lg:mt-0">
             <div className='flex flex-col lg:flex-row lg:justify-between p-2'>
-              <div className='flex flex-col'>
+              <div className='flex flex-col lg:w-[45%]'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Name</label>
                 <input type='text' placeholder="John Doe" className='bg-[#15273a] border-b-2 outline-none contact-input  mt-2 border-dashed border-blue-300' ></input>
               </div>
-              <div className='flex flex-col mt-12 lg:mt-0 lg:ml-8'>
+              <div className='flex flex-col mt-12 lg:mt-0 lg:w-[45%]'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Email</label>
                 <input type='text' placeholder="doe@example.com" className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
               </div>
