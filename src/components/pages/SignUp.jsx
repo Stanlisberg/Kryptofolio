@@ -97,7 +97,7 @@ function SignUp() {
             />
             {/* </div> */}
             {removePasswordIcon === true ? (
-              <AiFillLocks
+              <AiFillLock
                 className="absolute left-2 top-3 text-gray-400"
                 color="teal"
               />
