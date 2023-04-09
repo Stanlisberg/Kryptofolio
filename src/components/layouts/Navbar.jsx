@@ -63,35 +63,35 @@ function Navbar() {
         >
           <ul className="w-full p-4">
             <li
-              className="border-b py-6 cursor-pointer mobile-color"
+              className="border-b py-6 cursor-pointer text-[#ccd6f6]"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/">Home</Link>
             </li>
 
             <li
-              className="border-b py-6 cursor-pointer mobile-color"
+              className="border-b py-6 cursor-pointer text-[#ccd6f6]"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/About">About</Link>
             </li>
 
             <li
-              className="border-b py-6 cursor-pointer mobile-color"
+              className="border-b py-6 cursor-pointer text-[#ccd6f6]"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Contact">Contact</Link>
             </li>
 
             <li
-              className="border-b py-6 cursor-pointer mobile-color"
+              className="border-b py-6 cursor-pointer text-[#ccd6f6]"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Market">Coin-Market</Link>
             </li>
             { user?.email? (
               <li
-              className=" py-6 cursor-pointer mobile-color"
+              className=" py-6 cursor-pointer text-[#ccd6f6]"
               onClick={() => setNavIcon(!navIcon)}
             >
               <Link to="/Profile">Profile</Link>

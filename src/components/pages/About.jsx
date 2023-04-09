@@ -15,7 +15,8 @@ function About() {
   return (
     <>
      <div className=' mt-24 text-center text-2xl font-mono'>About Kryptofolio...</div>
-      <div className="py-8 mt-8 rounded-lg mx-auto max-w-[1200px] bg-[#15273a]">
+      <div className="py-8 px-8 mt-8 rounded-lg mx-auto max-w-[1200px] bg-[#15273a]">
+        <div className='border-yellow-300 border-2'>
         <div className=" flex flex-col justify-center items-center lg:flex-row lg:justify-between">
           <div className="w-full lg:w-[50%]">
             <div className="mx-7 text-justify font-mono text-2xl text-white-500 text-blue-300">
@@ -56,6 +57,7 @@ function About() {
               ratione adipisci pariatur voluptatibus dolorem ducimus reiciendis
             </p>
           </div>
+        </div>
         </div>
       </div>
       <div className=" mt-8 max-w-[1200px] rounded-xl p-5 mx-auto flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center bg-[#040f207d] mb-8">

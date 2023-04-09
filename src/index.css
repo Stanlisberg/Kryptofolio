@@ -92,9 +92,6 @@ input::placeholder {
 .yellow {
   color: red;
 }
-.mobile-color {
-  color: #ccd6f6;
-}
 
 .bg-gray {
   background: hsl(216, 79%, 7%);

@@ -91,13 +91,13 @@ function SignUp() {
                 setRemovePasswordIcon(true);
                 clearPasswordInput();
               }}
-              type="text"
-              className="bg-input w-full p-2 rounded-xl"
+              type="password"
+              className="bg-input w-full p-2 rounded-xl placeholder-shown"
               placeholder="Password"
             />
             {/* </div> */}
             {removePasswordIcon === true ? (
-              <AiFillLock
+              <AiFillLocks
                 className="absolute left-2 top-3 text-gray-400"
                 color="teal"
               />

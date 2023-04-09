@@ -93,7 +93,7 @@ function SignIn() {
                 setRemovePasswordIcon(true);
                 clearPasswordInput();
               }}
-              type="text"
+              type="password"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Password"
             />
