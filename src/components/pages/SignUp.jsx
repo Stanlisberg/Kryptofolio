@@ -63,9 +63,10 @@ function SignUp() {
                 setRemoveEmailIcon(true);
                 clearEmailInput();
               }}
-              type="text"
+              type="email"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Email"
+              required='required'
             />
             {removeEmailIcon === true ? (
               <AiOutlineMail
@@ -94,6 +95,7 @@ function SignUp() {
               type="password"
               className="bg-input w-full p-2 rounded-xl placeholder-shown"
               placeholder="Password"
+              required='required'
             />
             {/* </div> */}
             {removePasswordIcon === true ? (

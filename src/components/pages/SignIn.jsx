@@ -65,9 +65,10 @@ function SignIn() {
                 setRemoveEmailIcon(true);
                 clearEmailInput();
               }}
-              type="text"
+              type="email"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Email"
+              required='required'
             />
             {removeEmailIcon === true ? (
               <AiOutlineMail
@@ -96,6 +97,7 @@ function SignIn() {
               type="password"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Password"
+              required='required'
             />
             {removePasswordIcon === true ? (
               <AiFillLock
