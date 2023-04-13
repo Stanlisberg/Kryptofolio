@@ -22,9 +22,9 @@ function Trending() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-70 px-4 ">
         {trending &&
           trending.length > 0 &&
-          trending.map((coin => 
-          <TrendingItem coin={coin} key={coin.id} />
-          ))}
+          trending.map((coin, index) => 
+          <TrendingItem coin={coin}  key={index}/>
+          )}
       </div>
     </div>
   );

@@ -305,6 +305,10 @@ input::placeholder {
   transform: scale(0.96);
 }
 
+.meme:hover {
+  transform: scale(0.96);
+}
+
 /*-------Top Coin element-------------*/
 .top-container {
   max-width: 1350px;

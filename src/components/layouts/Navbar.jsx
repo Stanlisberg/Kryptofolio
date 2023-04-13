@@ -19,18 +19,18 @@ function Navbar() {
           </div>
           <div className="pt-3">
             <div className="hidden md:contents relative">
-              <Link to="/" className="primary-color link pl-5">
+              <Link to="/" className="text-[#ccd6f6] link pl-5">
                 Home
               </Link>
-              <Link to="/About" className="primary-color link pl-5 ">
+              <Link to="/About" className="text-[#ccd6f6] link pl-5 ">
                 About
               </Link>
-              <Link to="/Contact" className="primary-color link pl-5">
+              <Link to="/Contact" className="text-[#ccd6f6] link pl-5">
                 Contact
               </Link>
               <Link
                 to="/Market"
-                className="primary-color link-market pb-2 pl-5 pr-5 "
+                className="text-[#ccd6f6] link-market pb-2 pl-5 pr-5 "
               >
                 Coin-Market
               </Link>

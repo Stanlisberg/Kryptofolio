@@ -36,7 +36,7 @@ function Home() {
                     size="14"
                     // color="#64ffda"
                     color='teal'
-                    style={over ? { color: "#1f2937" } : ""}
+                    style={over ? {color: "#1f2937" } : ""}
                   />
                 </span>
               </button>
@@ -74,7 +74,7 @@ function Home() {
               about any type of digital currency in the crypto ecosystem.
             </p>
             <div className="visit mx-auto lg:mx-0 flex-">
-              <Link to="/Market">Visit Market</Link>
+              <Link to="/Market" className='meme'>Visit Market</Link>
             </div>
           </div>
           <div className="lg:relative mt-20 lg:mt-0">
