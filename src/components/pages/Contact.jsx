@@ -75,7 +75,7 @@ function Contact() {
                  className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
             </div>
             <button 
-              className="bg-[teal] text-gray-300 py-2 px-3 mt-14 ml-2 cursor-pointer rounded-md flex items-center hover:scale-90 ease-in-out duration-300"
+              className="bg-[teal] text-gray-300 py-2 px-3 mt-14 ml-2 cursor-pointer rounded-md flex items-center hover:scale-90 ease-in duration-300"
               type='submit'>
               Send <IoIosRocket style={{marginLeft: '4px'}}/>
             </button>

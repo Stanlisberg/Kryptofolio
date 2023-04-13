@@ -236,6 +236,8 @@ input::placeholder {
   transform: scale(0.93);
   background-color: #64ffda;
   border: 1px solid #64ffda;
+  transition:ease-in-out;
+  animation-duration: 500;
 }
 
 .sign-instead:hover {
