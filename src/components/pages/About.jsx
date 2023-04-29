@@ -13,10 +13,10 @@ function About() {
   };
   return (
     <>
-      <div className=" mt-24 text-center text-2xl font-mono">
+      <div className=" mt-24 text-center text-2xl font-bold  ">
         About Kryptofolio...
       </div>
-      <div className="py-8 px-8 mt-8 rounded-lg mx-auto max-w-[1200px] bg-[#15273a]">
+      <div className="py-10 px-8 mt-8 rounded-lg mx-auto max-w-[1200px] bg-[#15273a]">
         <div className="">
           <div className=" flex flex-col justify-center items-center lg:flex-row lg:justify-between">
             <div className="w-full lg:w-[50%]">
