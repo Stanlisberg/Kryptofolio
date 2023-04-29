@@ -20,7 +20,7 @@ function Contact() {
   return (
     <>
       <div className=' mt-24 text-center text-2xl font-bold'>Contact Us...</div>
-      <div className="mt-8 py-10 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] mb-8">
+      <div className="mt-8 py-10 md:py-20 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] mb-8">
        <div className="flex mx-10 flex-col justify-center items-center lg:flex-row lg:justify-between">
           <div className="w-full lg:w-[40%] items-center px-2 lg:px-0">
             <div className=" lg:mx-0 text-justify font-mono text-4xl text-white-500 text-blue-300">
