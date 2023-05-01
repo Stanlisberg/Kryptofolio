@@ -33,9 +33,10 @@ function Market() {
 
   return (
     <>
-      <div className="rounded-md mx-auto mt-32 py-0 px-3 max-w-[1200px] bg-[#15273a]">
-        <div className="flex flex-col-reverse md:flex-row justify-between mt-3 text-start md:mt-2 md:pt-4 md:pb-6  md:text-right">
-          <h1 className="mkt-heading text-3xl font-bold my-2 py-2 ml-2">Market</h1>
+     <div className=' text-center mt-24 text-2xl font-bold'>Market Analysis...</div>
+      <div className="rounded-md mx-auto mt-8 py-0 px-3 max-w-[1200px] bg-[#15273a]">
+        <div className="flex flex-col-reverse md:flex-row justify-between mt-3 text-start pt-8 md:mt-2 md:pt-4 md:pb-6  md:text-right">
+          <h1 className="mkt-heading text-3xl text-blue-300 font-bold my-2 py-2 ml-2">Market</h1>
           <div>
             <input
               className="mkt-input my-2 shadow-xl rounded-xl px-4 py-2 w-full"
@@ -53,10 +54,7 @@ function Market() {
             <thead className=" text-center">
               <tr className="primary-color border-b ">
                 <th
-                  className=""
-                  style={{
-                    color: "yellowgreen",
-                  }}
+                  className="text-[#9acd32]"
                 >
                   BM
                 </th>

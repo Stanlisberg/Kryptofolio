@@ -350,7 +350,7 @@ input::placeholder {
   color: #64ffda;
 }
 
-/*---------Info card---------*/
+/*---------Coin Info card---------*/
 .info-head {
   opacity: 0.8;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
@@ -366,6 +366,55 @@ input::placeholder {
   background: #15273a;
   max-width: 1200px;
   margin-left: 30px;
+}
+
+.go-back {
+  background-color: #15273a;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  max-width: 100px;
+  border-radius: 8px;
+  height: 100%;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+.go-back:hover {
+  color: #64ffda;
+}
+
+.coin-url {
+  background-color: grey;
+  max-width: 140px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 15px;
+}
+
+.mkt-stats {
+  font-size: 24px;
+  font-weight: bold;
+  color: teal;
+}
+
+.mkt-coin-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: yellowgreen;
+}
+
+.about-coin {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.about-coin-color {
+  color: #64ffda;
 }
 
 /*---BitCoin chart Item-------*/
@@ -391,12 +440,7 @@ input::placeholder {
 }
 
 /*----------- market----------- */
-/* .mkt-container {
-  background-color: #15273a;
-} */
-
 .mkt-heading {
-  color: #ccd6f6;
   font-size: 38px;
   font-weight: bold;
 }
@@ -462,54 +506,6 @@ input::placeholder {
   color: #1f2937;
 }
 
-/*-------- coin info-----------*/
-.go-back {
-  background-color: #15273a;
-  max-width: 100px;
-  border-radius: 8px;
-  height: 100%;
-  margin-left: 30px;
-  margin-top: 20px;
-  font-size: 16px;
-  text-align: center;
-}
-.go-back:hover {
-  color: #64ffda;
-}
-
-.coin-url {
-  background-color: grey;
-  max-width: 140px;
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  font-size: 15px;
-}
-
-.mkt-stats {
-  font-size: 24px;
-  font-weight: bold;
-  color: teal;
-}
-
-.mkt-coin-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: yellowgreen;
-}
-
-.about-coin {
-  max-width: 1350px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 26px;
-  padding-right: 26px;
-}
-
-.about-coin-color {
-  color: #64ffda;
-}
 
 /*------------footer----------------*/
 .footer-color {

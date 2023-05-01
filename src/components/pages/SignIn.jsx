@@ -109,8 +109,9 @@ function SignIn() {
             )}
           </div>
         </div>
-        <div className="flex justify-end mt-5 color-green cursor-pointer hover:text-gray-300" onClick={() => {navigate('/Forget-password')}}>
-          Forgot Password ?
+        <div className="flex justify-end mt-5 color-green cursor-pointer hover:text-gray-300" 
+             onClick={() => {navigate('/Forget-password')}}>
+             Forgot Password ?
         </div>
         <div className="text-center mt-6">
           <button
