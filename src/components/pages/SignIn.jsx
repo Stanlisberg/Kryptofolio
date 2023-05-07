@@ -2,34 +2,28 @@ import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import { toast } from 'react-toastify'
 
 function SignIn() {
-  const { signIn, user } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
 
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
   const [removePasswordIcon, setRemovePasswordIcon] = useState(true);
-  const [ password, setPassword] = useState();
-  const [ email, setEmail ] = useState()
+  const [password, setPassword] = useState();
+  const [email, setEmail] = useState();
 
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
+  //-----------SignIn Function
   const handleSubmit = (e) => {
-    try{
-        signIn(email, password);
-        toast.success('signed in successful')
-        navigate('/Profile')
-    } catch(e) {
-        console.log(e.message);
-        toast.error('wrong details')
-     }
+    signIn(email, password);
 
     e.preventDefault();
-  }
+  };
 
+  //------------Clear Email
   const clearEmailInput = () => {
     if (emailRef.current.value) {
       setRemoveEmailIcon(false);
@@ -38,6 +32,7 @@ function SignIn() {
     }
   };
 
+  //--------------Clear Password
   const clearPasswordInput = () => {
     if (passwordRef.current.value) {
       setRemovePasswordIcon(false);
@@ -51,8 +46,8 @@ function SignIn() {
       <h2 className="pb-4 mt-4 font-bold text-3xl overflow-hidden text-gray-300">
         Welcome Back!
       </h2>
-      <form className="mt-5" onSubmit={ handleSubmit }>
-        <div className='mb-6'> 
+      <form className="mt-5" onSubmit={handleSubmit}>
+        <div className="mb-6">
           <label htmlFor="Name" className="text-gray-300">
             Email
           </label>
@@ -68,7 +63,7 @@ function SignIn() {
               type="email"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Email"
-              required='required'
+              required="required"
             />
             {removeEmailIcon === true ? (
               <AiOutlineMail
@@ -97,7 +92,7 @@ function SignIn() {
               type="password"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Password"
-              required='required'
+              required="required"
             />
             {removePasswordIcon === true ? (
               <AiFillLock
@@ -109,9 +104,13 @@ function SignIn() {
             )}
           </div>
         </div>
-        <div className="flex justify-end mt-5 color-green cursor-pointer hover:text-gray-300" 
-             onClick={() => {navigate('/Forget-password')}}>
-             Forgot Password ?
+        <div
+          className="flex justify-end mt-5 color-green cursor-pointer hover:text-gray-300"
+          onClick={() => {
+            navigate("/Forget-password");
+          }}
+        >
+          Forgot Password ?
         </div>
         <div className="text-center mt-6">
           <button
@@ -124,10 +123,10 @@ function SignIn() {
       </form>
       <div className="flex justify-around mt-6 ">
         <p className="text-gray-300">Dont have an account?</p>
-        <Link to='/sign-up'>
-        <div className="sign-instead hover:text-gray-300 color-green">
-          Sign Up
-        </div>
+        <Link to="/sign-up">
+          <div className="sign-instead hover:text-gray-300 color-green">
+            Sign Up
+          </div>
         </Link>
       </div>
     </div>

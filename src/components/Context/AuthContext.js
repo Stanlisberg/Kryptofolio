@@ -6,7 +6,6 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-// import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify'
 
@@ -18,37 +17,44 @@ export const AuthProvider = ({ children }) => {
   const data = auth.currentUser;
   console.log(data?.email);
 
-  // Sign Up
+  //----------Sign Up
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
-    .then(response => {
-      console.log(response.user)
+    .then(() => {
+       toast.success('Account created!')
+       navigate('/')
     })
-    .catch((e) => {
-      alert(e.message)
+    .catch(err => {
+      if(err) {
+        console.log(err)
+        toast.error('Email alrealy exist')
+      }
     })
-    toast.success('Account created!')
-    alert('Account created!')
-    navigate('/')
-  
   };
 
-  // Sign In
+  //------------Sign In
   const signIn = (email, password) => {
      signInWithEmailAndPassword(auth, email, password)
-    .then((response) => {
-      console.log(response.user)
-    })
-  }
+     .then(() => {
+        toast.success('Signed in successful')
+        navigate('/')
+      })
+     .catch(err => {
+        if(err) {
+          console.log(err)
+          toast.error('User not found')
+        }
+     })
+  } 
 
-  // Log Out
+  //-----------Log Out
   const logOut = () => {
      signOut(auth)
      .then(() => {
      })
   }
 
-  // Check if user is logged in
+  //----------Check if user is logged in
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser)

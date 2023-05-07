@@ -1,11 +1,13 @@
 import { AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../Context/AuthContext";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 function SignUp() {
+  const { signUp } = useContext(AuthContext);
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [removeEmailIcon, setRemoveEmailIcon] = useState(true);
@@ -13,10 +15,6 @@ function SignUp() {
 
   const emailRef = useRef();
   const passwordRef = useRef();
-
-  const { signUp } = useContext(AuthContext);
-
-  const navigate = useNavigate();
 
   const clearEmailInput = () => {
     if (emailRef.current.value) {
@@ -66,7 +64,7 @@ function SignUp() {
               type="email"
               className="bg-input w-full p-2 rounded-xl"
               placeholder="Email"
-              required='required'
+              required="required"
             />
             {removeEmailIcon === true ? (
               <AiOutlineMail
@@ -95,7 +93,7 @@ function SignUp() {
               type="password"
               className="bg-input w-full p-2 rounded-xl placeholder-shown"
               placeholder="Password"
-              required='required'
+              required="required"
             />
             {/* </div> */}
             {removePasswordIcon === true ? (
