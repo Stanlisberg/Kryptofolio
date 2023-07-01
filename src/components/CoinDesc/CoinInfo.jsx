@@ -1,7 +1,7 @@
 import KryptofolioContext from "../Context/KryptofolioContext";
 import { useEffect, useContext } from "react";
 import CoinInfoItem from "./CoinInfoItem";
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom' 
 
 function CoinInfo() {
   const { coinId } = useParams()
