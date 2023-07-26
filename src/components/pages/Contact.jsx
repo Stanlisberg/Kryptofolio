@@ -3,9 +3,11 @@ import { toast } from 'react-toastify'
 import { ImPhone } from 'react-icons/im'
 import { FaEnvelope } from 'react-icons/fa'
 import { IoIosRocket} from 'react-icons/io'
+import {useState, useEffect} from 'react';
 
 function Contact() {
 
+  
   const nameRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
@@ -17,12 +19,14 @@ function Contact() {
 
     e.preventDefault()
   }
+  
   return (
-    <>
+    
+     <>
       <div className=' mt-24 text-center text-2xl font-bold'>Contact Us...</div>
-      <div className="mt-8 py-10 md:py-20 rounded-lg mx-auto max-w-[1200px] bg-[#15273a] mb-8">
+      <div className="mt-8 py-10 mx-6 md:py-20 rounded-lg xl:mx-auto max-w-[1200px] bg-[#15273a] mb-8">
        <div className="flex mx-10 flex-col justify-center items-center lg:flex-row lg:justify-between">
-          <div className="w-full lg:w-[40%] items-center px-2 lg:px-0">
+          <div className="w-full lg:w-[40%] items-center px-0 lg:px-0">
             <div className=" lg:mx-0 text-justify font-mono text-4xl text-white-500 text-blue-300">
               {" "}
               Let's talk.
@@ -45,7 +49,7 @@ function Contact() {
           <form 
             className="w-full mt-20 lg:w-[40%] lg:mt-0"
             onSubmit={submitForm}>
-            <div className='flex flex-col lg:flex-row lg:justify-between p-2'>
+            <div className='flex flex-col lg:flex-row lg:justify-between p-0'>
               <div className='flex flex-col lg:w-[45%]'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Name</label>
                 <input 
@@ -65,7 +69,7 @@ function Contact() {
                 className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
               </div>
             </div>
-            <div className='flex flex-col mt-10  mx-2'>
+            <div className='flex flex-col mt-10  mx-0'>
                 <label htmlFor="Name" className='text-[#ccd6f6]'>Message</label>
                 <input 
                  type='text' 
@@ -75,7 +79,7 @@ function Contact() {
                  className='bg-[#15273a] border-b-2 outline-none contact-input mt-2 border-dashed border-blue-300' ></input>
             </div>
             <button 
-              className="bg-[teal] text-gray-300 py-2 px-3 mt-14 ml-2 cursor-pointer rounded-md flex items-center hover:scale-90 ease-in duration-300"
+              className="bg-[teal] text-gray-300 py-2 px-3 mt-14 ml-0 cursor-pointer rounded-md flex items-center hover:scale-90 ease-in duration-300"
               type='submit'>
               Send <IoIosRocket style={{marginLeft: '4px'}}/>
             </button>

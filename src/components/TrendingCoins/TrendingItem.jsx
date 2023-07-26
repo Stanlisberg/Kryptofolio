@@ -2,9 +2,9 @@ function TrendingItem( {coin} ) {
 
   return (
     <div
-      className="rounded-2xl bg-gray flex justify-between p-4 hover:scale-95 ease-in duration-200"
+      className="rounded-2xl bg-gray flex justify-between p-4 hover:scale-95 ease-in duration-200 overflow-x-auto"
     >
-      <div className="flex justify-between w-full items-center">
+      <div className="flex justify-between w-full items-center  ">
         <div className="flex justify-between ">
           <img
             className="mr-4 rounded-full"
