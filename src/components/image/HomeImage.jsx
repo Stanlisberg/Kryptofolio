@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function HomeImage() {
   // const imageRef = useRef();
@@ -24,21 +26,26 @@ function HomeImage() {
   // }, []);
   
   return (
-    // <div>
-    //   <img
-    //     ref={imageRef}
-    //     className="hey h-64 w-full mx-auto lg:absolute lg:inset-0 lg:h-full lg:w-full"
-    //     alt="crypto"
-    //     width="100%"
-    //   />
-    // </div>
-    <div>
-      <div className='Image-container'>
-        <img className='a' src='images/bitcoin.svg' width='400'/>
-        {/* <img className='b' src='images/flower.svg' />
-        <img className='c' src='images/connected.svg' /> */}
-      </div>
-    </div>
+    <Carousel
+      showThumbs={false}
+      autoPlay={true}
+      transitionTime={1}
+      infiniteLoop={true}
+      showStatus={false}
+      width={360}
+      >
+      {/* <div className='Image-container'> */}
+       <div>
+        <img className='a' src='images/bitcoin.svg' width='100'/>
+       </div>
+       <div>
+        <img className='b' src='images/flower.svg' />
+       </div>
+       <div>
+        <img className='c' src='images/connected.svg'/>
+       </div>
+      {/* </div> */}
+    </Carousel>
   );
 }
 export default HomeImage;
