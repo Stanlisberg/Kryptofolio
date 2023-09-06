@@ -16,7 +16,7 @@ function About() {
       <div className=" mt-24 text-center text-2xl font-bold  ">
         About Kryptofolio...
       </div>
-      <div className="py-10 px-8 mt-8 mx-6 rounded-lg xl:mx-auto max-w-[1200px] bg-[#15273a]">
+      <div className="py-10 px-6 mt-8 mx-4 rounded-lg xl:mx-auto max-w-[1200px] bg-[#15273a]">
         <div className="">
           <div className=" flex flex-col justify-center items-center lg:flex-row lg:justify-between">
             <div className="w-full lg:w-[50%]">
@@ -58,7 +58,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className=" mt-8 max-w-[1200px] rounded-xl p-5 mx-6 xl-mx-auto flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center bg-[#040f207d] mb-8">
+      <div className=" mt-8 max-w-[1200px] rounded-xl p-5 mx-4 xl-mx-auto flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center bg-[#040f207d] mb-8">
         <div className="flex items-center">
           <p className="text-md font-mono">Sign up for our news Letter.</p>
         </div>
