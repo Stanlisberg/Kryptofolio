@@ -6,7 +6,7 @@ function CoinInfoItem({ coinInfoData }) {
   return (
     <>
       <div className="flex flex-col-reverse lg:justify-between mt-24">
-        <div className="info-head my-5 h-40 relative mt-10">
+        <div className="info-head my-5 h-40 relative mt-10 ml-[20px] lg:ml-[30px]">
           <img
             className="ml-1 p-2 mt-2 absolute top-0"
             src={coinInfoData?.image?.large}
@@ -25,13 +25,13 @@ function CoinInfoItem({ coinInfoData }) {
         </div>
 
         <Link to="/Market">
-          <div className="go-back py-3 cursor-pointer hover:scale-90 ease-in-out duration-300">
+          <div className="go-back ml-[20px] lg:ml-[30px] py-3 cursor-pointer hover:scale-90 ease-in-out duration-300">
             Go Back
           </div>
         </Link>
       </div>
-      <div className="grid lg:grid-cols-2 my-8">
-        <div className="info-card py-2 mr-5 ml-10 lg:mr-1">
+      <div className="grid lg:grid-cols-2 my-8 gap-4 lg:gap-0">
+        <div className="info-card py-2 ml-[20px] mr-[20px] lg:ml-[30px] lg:mr-[30px]">
           <div className="ml-4 flex justify-between mt-5 w-auto border-b">
             <div>
               <p>{coinInfoData?.symbol?.toUpperCase()}</p>
@@ -82,7 +82,7 @@ function CoinInfoItem({ coinInfoData }) {
             </div>
           </div>
         </div>
-        <div className="info-card py-2 pl-5 mt-4 lg:mt-0 text-start lg:mr-6 mr-5">
+        <div className="info-card py-2 pl-5 mt-4 lg:mt-0 text-start ml-[20px] mr-[20px] lg:ml-[30px] lg:mr-[30px]">
           <div className="my-10">
             <p className="mkt-stats table-row-color border-b ">Market Stats</p>
             <div className="grid grid-cols-3 my-4 md:my-[52px] py-3">
@@ -232,7 +232,7 @@ function CoinInfoItem({ coinInfoData }) {
           </div>
         </div>
       </div>
-      <div className="about-coin my-15 mb-16">
+      <div className="about-coin my-15 mb-16 pl-[20px] pr-[20px] lg:pl-[30px] lg:pr-[30px]">
         <div className="font-medium text-2xl mt-5">
           About <span className="about-coin-color">{coinInfoData?.name}</span>
         </div>

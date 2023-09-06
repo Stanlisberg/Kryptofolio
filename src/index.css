@@ -357,7 +357,6 @@ input::placeholder {
   border-radius: 10px;
   background: #15273a;
   width: 250px;
-  margin-left: 30px;
 }
 .info-card {
   opacity: 0.8;
@@ -365,7 +364,7 @@ input::placeholder {
   border-radius: 10px;
   background: #15273a;
   max-width: 1200px;
-  margin-left: 30px;
+ 
 }
 
 .go-back {
@@ -374,7 +373,6 @@ input::placeholder {
   max-width: 100px;
   border-radius: 8px;
   height: 100%;
-  margin-left: 30px;
   margin-top: 20px;
   font-size: 16px;
   text-align: center;
@@ -409,8 +407,6 @@ input::placeholder {
   max-width: 1350px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 26px;
-  padding-right: 26px;
 }
 
 .about-coin-color {
