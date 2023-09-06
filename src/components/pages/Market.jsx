@@ -34,7 +34,7 @@ function Market() {
   return (
     <>
      <div className=' text-center mt-24 text-2xl font-bold'>Market Analysis...</div>
-      <div className="rounded-md mx-6 xl:mx-auto mt-8 py-0 px-3 max-w-[1200px] bg-[#15273a]">
+      <div className="rounded-md mx-4 xl:mx-auto mt-8 py-0 px-3 max-w-[1200px] bg-[#15273a]">
         <div className="flex flex-col-reverse md:flex-row justify-between mt-3 text-start pt-8 md:mt-2 md:pt-4 md:pb-6  md:text-right">
           <h1 className="mkt-heading text-3xl text-blue-300 font-bold my-2 py-2 ml-2">Market</h1>
           <div className='mx-2'>
